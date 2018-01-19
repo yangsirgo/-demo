@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.bootcss.com/vue/2.5.13/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <input v-for="(item, index) in list" :key="index" v-model="list[index]" @input="print" />
+    </div>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            list: {
+                0: 'a',
+                1: 'b',
+                2: 'c'
+            }
+        },
+        methods: {
+            print() {
+                console.log(this.list);
+            }
+        },
+        mounted() {
+            var _t = this;
+            setTimeout(function() {
+                _t.list[0] = 'd';
+            console.log(_t.list);
+        }, 1000);
+        }
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.bootcss.com/vue/2.5.13/vue.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        <my-list :books="books">
+            <!--作用域插槽也可以是具名的slot-->
+            <!--<template slot="book" scope="props">-->
+            <!--<template slot="book" scope="props">-->
+                <!--<li>{{props.bookName}}</li>-->
+                <!--<li>哈哈哈</li>-->
+                <li slot="book">哈哈哈</li>
+            <!--</template>-->
+        </my-list>
+    </div>
+
+    <script>
+        Vue.component('my-list',{
+            props:{
+                books:{
+                    type:Array,
+                    default:function(){
+                        return [];
+                    }
+                }
+            },
+            template:'<ul><slot name="book" v-for="book in books" :book-name="book.name"></slot></ul>',
+            mounted:function(){
+                var ul = this.$slots.book;
+                console.log(ul);
+                console.log(this.$slots);//没有template的渲染 可以使用 比如直接li标签  上面的例子有template 有props 这样就无法访问$slots数据了
+            }
+        })
+        var app = new Vue({
+            el:'#app',
+            data:{
+                books:[
+                    {
+                        name:'shizhan'
+                    },
+                    {
+                        name:'jingcui'
+                    },
+                    {
+                        name:'gaojisheji'
+                    }
+                ]
+            }
+        })
+    </script>
+</body>
+</html>

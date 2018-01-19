@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.bootcss.com/vue/2.5.13/vue.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        <child-component>
+            <template scope="props">
+                <p>parent components</p>
+                <p>{{props.msg}}</p>
+            </template>
+        </child-component>
+    </div>
+<script>
+    Vue.component('child-component',{
+        template:'<div class="contaniner"><slot msg="son_neirong"></slot></div>'
+    })
+    var app = new Vue({
+        el:'#app'
+    })
+</script>
+</body>
+</html>

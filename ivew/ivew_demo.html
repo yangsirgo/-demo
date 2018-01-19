@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="//unpkg.com/iview@2.8.0/dist/styles/iview.css">
+    <link rel="stylesheet" href="http://192.168.2.4/nocportal/skin/blue/css/layout/inpage.css">
+    <link rel="stylesheet" href="http://192.168.2.4/nocportal/skin/blue/css/discovery/discoverySetting.css">
+    <link rel="stylesheet" href="http://192.168.2.4/nocportal/skin/blue/css/face/blue.css">
+    <link rel="stylesheet" href="./add_tag.css">
+    <!-- 引入Vue -->
+    <script src="https://cdn.bootcss.com/vue/2.5.13/vue.min.js"></script>
+    <!--<script type="text/javascript" src="http://v1.vuejs.org/js/vue.min.js"></script>-->
+    <!-- 引入组件库 -->
+    <script src="//unpkg.com/iview@2.8.0/dist/iview.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <div class="setting_box">
+            <table class="setting_table">
+            <tbody><tr>
+                <td class="label1">
+                    单个IP
+                </td>
+                <td colspan="4">
+                    <!--<input type="text" class="text_input1" style="width:466px;" value="" id="single_ip" maxlength="15" onkeyup="cky(this)" onchange="cky(this)">-->
+                    <i-input v-model="value" placeholder="请输入..." style="width: 466px" @on-keyup="cky"></i-input>
+                </td>
+                <td>
+                    <!--<div class="ctrlbtn add-blue" title="添加" onclick="addSingleIp()"></div>-->
+                    <ms-addbutton></ms-addbutton>
+                </td>
+            </tr>
+            <tr>
+                <td class="label1">
+                    IP范围
+                </td>
+                <td class="label2">
+                    开始IP
+                </td>
+                <td class="td_input">
+                    <input type="text" class="text_input1" placeholder="192.168.1.1" value="" id="start_ip" maxlength="15" onkeyup="cky(this)" onchange="cky(this)">
+                </td>
+                <td class="label2">
+                    结束IP
+                </td>
+                <td class="td_input">
+                    <input type="text" class="text_input1" placeholder="192.168.1.100" value="" id="end_ip" maxlength="15" onkeyup="cky(this)" onchange="cky(this)">
+                </td>
+                <td>
+                    <!--<div class="ctrlbtn add-blue" title="添加" onclick="addIpRange()"></div>-->
+                    <ms-addbutton></ms-addbutton>
+                </td>
+            </tr>
+            <tr>
+                <td class="label1">
+                    子网
+                </td>
+                <td class="label2">
+                    子网地址
+                </td>
+                <td class="td_input">
+                    <input type="text" class="text_input1" placeholder="192.168.1.1" value="" id="subnet" maxlength="15" onkeyup="cky(this)" onchange="cky(this)">
+                </td>
+                <td class="label2">
+                    子网掩码
+                </td>
+                <td class="td_input">
+                    <input type="text" class="text_input1" value="255.255.255.0" id="subnetMask" maxlength="15" onkeyup="cky(this)" onchange="cky(this)">
+                </td>
+                <td>
+                    <!--<div class="ctrlbtn add-blue" title="添加" onclick="addSubnet()"></div>-->
+                    <ms-addbutton></ms-addbutton>
+                </td>
+            </tr>
+            <tr>
+                <td class="label1"></td>
+                <td class="label2" colspan="5">
+                    <div class="core_input" id="blacklist"></div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<script>
+    Vue.component('ms-addbutton',{
+        template:'<div class="chip chip-empty chip-empty-born"><div class="chipLabel"></div><input class="chipInput" placeholder="Type Chip Value"><div class="chipXbutton"></div></div>',
+        methods:{
+            containerClicked:function(e){
+                    for(i in chips){
+                        if((event.target == chips[i].element )||
+                                (event.target == chips[i].xButton)){
+
+                            var chipObj = chips[i];
+                            var chipElement = chipObj.element;
+                            var xButton = chipObj.xButton;
+                            var label = chipObj.label;
+                            var input = chipObj.input;
+
+                            if (event.target == xButton){
+                                if(chipObj.mode == "empty"){
+                                    setChipFocus(chipObj);
+                                }else{
+                                    removeChip(chipObj);
+                                }
+                            }else if(event.target == chipElement){
+                                setChipFocus(chipObj);
+                            }
+
+                        }
+                    }
+                    if(event.target==container){
+                        unfocusAll();
+                    }
+                }
+        }
+    })
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            value: ''
+        },
+        methods:{
+            cky:function(e){
+                var v = e.target.value;
+                var t = v.replace(/[\u4e00-\u9fa5]/g, "");
+                console.log('触发啦');
+                var _ing = true;
+                if(v != t){
+                    _ing&&this.$Message.error('禁止输入汉字');
+
+                }
+                _ing = false;
+            },
+
+        }
+    })
+
+
+</script>
+</body>
+</html>

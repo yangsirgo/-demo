@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- 引入样式 -->
+    <!--<link rel="stylesheet" href="//unpkg.com/iview/dist/styles/iview.css">-->
+    <!-- 引入组件库 -->
+    <!--<script src="//unpkg.com/iview@1.0.1/dist/iview.min.js"></script>-->
+    <style>
+        :root{
+            /*--main-bg-color: #191425;*/
+            --chip-body-regular: #403950;
+            --chip-body-hover: #1EABE3;
+            --accentColor-main: #1EABE3;
+            --brandColor: #e31e48;
+            --watermark: rgba(1,1,1,0.5);
+            --chip-body-focus: var(--accentColor-main);
+            --chip-empty-hover: var(--accentColor-main);
+            --xcolor: white;
+
+            --chipXicon-gradient:transparent 40%,var(--xcolor) 40%,var(--xcolor) 40%,var(--xcolor) 60%,var(--xcolor) 60%,transparent 60%;
+
+
+            --chipXicon: -webkit-linear-gradient(top, var(--chipXicon-gradient)),
+            -webkit-linear-gradient(left, var(--chipXicon-gradient));
+        -moz-linear-gradient(top, var(--chipXicon-gradient)),
+        -moz-linear-gradient(left, var(--chipXicon-gradient));
+        -ms-linear-gradient(top, var(--chipXicon-gradient)),
+        -ms-linear-gradient(left, var(--chipXicon-gradient));
+        linear-gradient(top, var(--chipXicon-gradient)),
+        linear-gradient(left, var(--chipXicon-gradient));
+        }
+
+
+        body{
+            height:100vh;
+            background: var(--main-bg-color);
+        }
+        .container{
+            background: var(--main-bg-color);
+            height: 100%;
+            -webkit-transition: all 1s ease-in-out;
+            -moz-transition: all 1s ease-in-out;
+            -ms-transition: all 1s ease-in-out;
+            -o-transition: all 1s ease-in-out;
+            transition: all 1s ease-in-out;
+        }
+
+        .chip{
+            position: relative;
+            display: inline-block;
+            height: 42px;
+            width: 140px;
+            background: var(--chip-body-regular);
+            margin: 10px;
+            border-radius:21px;
+            cursor:pointer;
+            padding-right:10px;
+            padding-left:10px;
+            overflow: hidden;
+
+        }
+        .chip:hover{
+            background: var(--accentColor-main);
+        }
+        .chip:hover .chipXbutton{
+            opacity:1;
+        }
+        .chipLabel{
+            float:left;
+            color: white;
+            font-family: arial, Sans-serif;
+            font-size:16px;
+            position:relative;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            -moz-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            -o-transform: translateY(-50%);
+            transform: translateY(-50%);
+            max-width:70%;
+            user-select: none;
+            overflow:hidden;
+            pointer-events: none
+        }
+        .chipInput{
+            width:0;
+            display:none;
+            overflow:hidden;
+            background:none;
+            border:none;
+            color:white;
+            font-family: arial, Sans-serif;
+            font-size:16px;
+            max-width:65%;
+            position:relative;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            -moz-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            -o-transform: translateY(-50%);
+            transform: translateY(-50%);
+        }
+
+        .chip-focus .chipLabel{
+            width: 0;
+            overflow: hidden;
+        }
+
+        .chipXbutton{
+            width: 22px;
+            height:22px;
+            float: right;
+            position: relative;
+            -webkit-transform: translateY(-50%) rotate(45deg);
+            -moz-transform: translateY(-50%) rotate(45deg);
+            -ms-transform: translateY(-50%) rotate(45deg);
+            -o-transform: translateY(-50%) rotate(45deg);
+            transform: translateY(-50%) rotate(45deg);
+            cursor:pointer;
+            top: 50%;
+            border-radius:50%;
+            background: transparent;
+            background-image: var(--chipXicon);
+            opacity: 0.3;
+        }
+        .chipXbutton:hover{
+            opacity: 1;
+            background-image: var(--chipXicon);
+        }
+
+        /*chip empty state*/
+        .chip-empty{
+            position: relative;
+            width:42px;
+            height:42px;
+            min-width: 42px;
+            padding:0px;
+
+        }
+        .chip-empty .chipXbutton{
+            float: none;
+            width: 22px;
+            height: 22px;
+            opacity: 1;
+            margin-right: auto;
+            margin-left: auto;
+            background-image: var(--chipXicon);
+            -webkit-transform: translateY(-50%) rotate(90deg);
+            -moz-transform: translateY(-50%) rotate(90deg);
+            -ms-transform: translateY(-50%)  rotate(90deg);
+            -o-transform: translateY(-50%)  rotate(90deg);
+            transform: translateY(-50%)  rotate(90deg);
+
+
+
+        }
+        .chip-empty .chipLabel{
+            display:none;
+        }
+        .chip-empty .chipInput{
+            display:none;
+        }
+        .chip-empty:hover{
+            background: var(--accentColor-main);
+            scaleY = 1.3;
+
+        }
+        .chip-empty:hover .chipXbutton{
+            background-image: var(--chipXicon);
+        }
+        chip-empty: hover .chipLabel{
+            opacity: 1;
+        }
+        .chip-focus{
+            position: relative;
+            display: inline-block;
+            border-radius:21px;
+            height: 42px;
+            width: 200px;
+            background: var(--chip-body-focus);
+            padding-right:10px;
+            padding-left:10px;
+            margin:10px;
+            overflow:hidden;
+        }
+        .chip-focus .chipInput{
+            display:inline-block;
+            position:relative;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            -moz-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            -o-transform: translateY(-50%);
+            transform: translateY(-50%);
+            float:left;
+            color: white;
+            font-family: arial, Sans-serif;
+            font-size:16px;
+            max-width:65%;
+            width:65%;
+            background:none;
+            border:none;
+            outline:none;
+
+        }
+
+        input::-webkit-input-placeholder {
+            color: var(--watermark) !important;
+
+        }
+
+        input:-moz-placeholder { /* Firefox 18- */
+            color: var(--watermark) !important;
+        }
+
+        input::-moz-placeholder {  /* Firefox 19+ */
+            color: var(--watermark) !important;
+        }
+
+        input:-ms-input-placeholder {
+            color: var(--watermark) !important;
+        }
+        .chip-focus .chipXbutton{
+            width:0;
+            overflow:hidden;
+
+        }
+
+        .transit > * {
+            -webkit-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
+            -ms-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+        }
+
+        @-webkit-keyframes chipEmptyBorn{
+            from {scale: 0% 0%;} to{scale: 100%;}
+        }
+        @-moz-keyframes chipEmptyBorn{
+            from {scale: 0% 0%;} to{scale: 100%;}
+        }
+        @-ms-keyframes chipEmptyBorn{
+            from {scale: 0% 0%;} to{scale: 100% 100%;}
+        }
+        @-o-keyframes chipEmptyBorn{
+            from {scale: 0% 0%;} to{scale: 100% 100%;}
+        }
+        @keyframes chipEmptyBorn{
+            from {transform:scale(0,0);} to{transform:scale(1,1);}
+        }
+
+        .chip-empty-born{
+
+            -webkit-animation: chipEmptyBorn 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            -moz-animation: chipEmptyBorn 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            -ms-animation: chipEmptyBorn 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            -o-transition: all 0.3s ease-in-out;
+            animation: chipEmptyBorn 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+        @-webkit-keyframes chipRemoval{
+            0%{
+                display: inline-block;
+                opacity: 1;
+                margin:10px;
+                padding-right:10px;
+                padding-left:10px;
+            }
+            1%{
+                display: inline-block;
+                opacity: 0;
+
+            }
+            99%{
+                display: inline-block;
+                width: 0;
+                opacity: 0;
+                margin:0;
+                padding-right:0;
+                padding-left:0;
+            }
+            100%{
+                width: 0;
+                opacity: 0;
+                margin:0;
+                padding-right:0;
+                padding-left:0;
+                display: none;
+
+            }
+        }
+        @-moz-keyframes chipRemoval{
+            0%{
+                display: inline-block;
+                opacity: 1;
+                margin:10px;
+                padding-right:10px;
+                padding-left:10px;
+            }
+            1%{
+                display: inline-block;
+                opacity: 0;
+
+            }
+            99%{
+                display: inline-block;
+                width: 0;
+                opacity: 0;
+                margin:0;
+                padding-right:0;
+                padding-left:0;
+            }
+            100%{
+                width: 0;
+                opacity: 0;
+                margin:0;
+                padding-right:0;
+                padding-left:0;
+                display: none;
+
+            }
+        }
+        @-ms-keyframes chipRemoval{
+            0%{
+                display: inline-block;
+                opacity: 1;
+                margin:10px;
+                padding-right:10px;
+                padding-left:10px;
+            }
+            1%{
+                display: inline-block;
+                opacity: 0;
+
+            }
+            99%{
+                display: inline-block;
+                width: 0;
+                opacity: 0;
+                margin:0;
+                padding-right:0;
+                padding-left:0;
+            }
+            100%{
+                width: 0;
+                opacity: 0;
+                margin:0;
+                padding-right:0;
+                padding-left:0;
+                display: none;
+
+            }
+        }
+        @-o-keyframes chipRemoval{
+            0%{
+                display: inline-block;
+                opacity: 1;
+                margin:10px;
+                padding-right:10px;
+                padding-left:10px;
+            }
+            1%{
+                display: inline-block;
+                opacity: 0;
+
+            }
+            99%{
+                display: inline-block;
+                width: 0;
+                opacity: 0;
+                margin:0;
+                padding-right:0;
+                padding-left:0;
+            }
+            100%{
+                width: 0;
+                opacity: 0;
+                margin:0;
+                padding-right:0;
+                padding-left:0;
+                display: none;
+
+            }
+        }
+        @keyframes chipRemoval{
+            0%{
+                display: inline-block;
+                opacity: 1;
+                margin:10px;
+                padding-right:10px;
+                padding-left:10px;
+            }
+            1%{
+                display: inline-block;
+                opacity: 0;
+
+            }
+            99%{
+                display: inline-block;
+                width: 0;
+                opacity: 0;
+                margin:0;
+                padding-right:0;
+                padding-left:0;
+            }
+            100%{
+                width: 0;
+                opacity: 0;
+                margin:0;
+                padding-right:0;
+                padding-left:0;
+                display: none;
+
+            }
+        }
+        .chip-removing{
+            transform-origin:0%;
+            animation: chipRemoval 0.4s;
+        }
+
+        .paragraph{
+            font-family: arial, Sans-serif;
+            color: white;
+            opacity:0.2;
+        }
+    </style>
+</head>
+<body>
+    <div class="paragraph">Delete and add items as you wish</div>
+    <div id="container" class="container transit"></div>
+    <script>
+        var container = document.getElementById("container");
+        var chips = new Array();
+        container.chipOnFocus = Chip;
+        container.chipInitiator = Chip;
+        var Chip = function(contnt){
+            this.element = document.createElement("div");
+            this.element.className = "chip";
+            this.mode= "regular";
+            var content = contnt;
+            var label =   document.createElement("div");
+            var input = document.createElement("input");
+            this.content= content;
+            this.label= label;
+            this.input= input;
+            label.innerHTML= content;
+            label.className="chipLabel";
+            input.className="chipInput";
+            if(content!= null){
+                this.input.placeholder = this.content
+            }else{
+                this.input.placeholder ="Type Chip Value";
+            }
+            this.element.appendChild(label);
+            this.element.appendChild(input);
+            var xButton =     document.createElement("div");
+            this.xButton = xButton;
+            this.xButton.className = "chipXbutton";
+            this.element.appendChild(this.xButton);
+        }
+        /****prototype methods****/
+
+        Chip.prototype.updateChipContent= function(){
+            if(this.input.value !== ""){
+                this.content = this.input.value;
+                this.label.innerHTML = this.content;
+            }
+
+        }
+        Chip.prototype.focusIn=function(){
+            this.element.className = "";
+            this.element.className = "chip chip-focus";
+            this.input.focus();
+            this.mode="focus";
+        }
+        Chip.prototype.focusOut=function(){
+            this.element.className = "";
+            this.element.className = "chip";
+            this.updateChipContent();
+            if(this.content == null){
+                if(this == container.chipInitiator){
+                    this.empty();
+                }else{
+                    container.removeChip(this);
+                }
+            }
+        }
+        Chip.prototype.empty=function(){
+
+            this.element.className = "chip chip-empty";
+            this.content = null;
+            this.label.innerHTML = null;
+            this.input.value = null;
+            this.mode = "empty";
+        }
+
+
+        function createChip(chipName){
+            var chip = new Chip(chipName);
+            chips.push(chip);
+            container.appendChild(chip.element);
+            return(chip)
+        }
+
+
+        function containerClicked(event){
+            for(i in chips){
+                if((event.target == chips[i].element )||
+                        (event.target == chips[i].xButton)){
+
+                    var chipObj = chips[i];
+                    var chipElement = chipObj.element;
+                    var xButton = chipObj.xButton;
+                    var label = chipObj.label;
+                    var input = chipObj.input;
+
+                    if (event.target == xButton){
+                        if(chipObj.mode == "empty"){
+                            setChipFocus(chipObj);
+                        }else{
+                            removeChip(chipObj);
+                        }
+                    }else if(event.target == chipElement){
+                        setChipFocus(chipObj);
+                    }
+
+                }
+            }
+            if(event.target==container){
+                unfocusAll();
+            }
+        }
+
+        function setChipFocus(chip){
+            container.chipOnFocus = chip;
+            for (i in chips){
+                if(chips[i] == chip){
+                    chips[i].focusIn();
+                }else if ((chips[i] != Chip) &&(chips[i].mode=="focus")){
+                    chips[i].focusOut();
+                }
+            }
+        }
+
+        function unfocusAll(){
+            container.chipOnFocus= null;
+            for (i in chips){
+                if(chips[i].mode!="empty"){
+                    chips[i].focusOut();
+                }
+            }
+            checkForInitiator();
+        }
+
+
+        function removeChip(chipToRemove){
+            chipToRemove.element.className= "chip chip-removing"
+            chipToRemove.element.addEventListener("animationend",chipDeleting)
+            //container.removeChild(chipToRemove.element);
+            chips.splice(chips.indexof(chipToRemove), 1);
+        }
+
+        function createEmptyChip(){
+            var chip = createChip();
+            chip.element.class = "chip";
+            //alert(chips.indexOf(chip));
+            chip.empty();
+            return(chip);
+            chips.push(chip);
+        }
+        function chipDeleting(event){
+            container.removeChild(event.target);
+        }
+        function makeChipInitiator(){
+            container.chipInitiator = createEmptyChip();
+            container.chipInitiator.element.className = "chip chip-empty chip-empty-born";
+        }
+        function checkForInitiator(){
+            if(container.chipInitiator.content != null){
+                makeChipInitiator();
+            }
+        }
+        container.addEventListener('click', containerClicked);
+        createChip("John");
+        createChip("George");
+        createChip("Paul");
+        makeChipInitiator();
+    </script>
+</body>
+</html>
