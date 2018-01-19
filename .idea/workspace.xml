@@ -21,11 +21,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="vue_add_tagdemo.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="vue_add_tagdemo.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/vue_demo/vue_add_tagdemo.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.888889">
-              <caret line="10" column="46" selection-start-line="10" selection-start-column="46" selection-end-line="10" selection-end-column="46" />
+            <state vertical-scroll-proportion="0.5448354">
+              <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -41,14 +41,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ms_chip.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ms_chip.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vue_demo/js/ms_chip.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3838604">
-              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
-                <element signature="e#429#689#0" expanded="false" />
                 <element signature="e#742#971#0" expanded="false" />
                 <element signature="e#1000#1139#0" expanded="false" />
                 <element signature="e#1182#1536#0" expanded="false" />
@@ -77,9 +76,9 @@
         <option value="$PROJECT_DIR$/ivew/ivew_demo.html" />
         <option value="$PROJECT_DIR$/vue_demo/add_tag.html" />
         <option value="$PROJECT_DIR$/vue_demo/v_for_input实现双向数据绑定.html" />
-        <option value="$PROJECT_DIR$/vue_demo/vue_add_tagdemo.html" />
-        <option value="$PROJECT_DIR$/vue_demo/js/index.js" />
         <option value="$PROJECT_DIR$/vue_demo/js/ms_chip.js" />
+        <option value="$PROJECT_DIR$/vue_demo/js/index.js" />
+        <option value="$PROJECT_DIR$/vue_demo/vue_add_tagdemo.html" />
       </list>
     </option>
   </component>
@@ -406,6 +405,19 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.8888889">
           <caret line="28" column="1" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
+          <folding>
+            <element signature="e#5#904#0" expanded="false" />
+            <element signature="e#1251#1515#0" expanded="false" />
+            <element signature="e#1527#1571#0" expanded="false" />
+            <element signature="e#1596#1614#0" expanded="false" />
+            <element signature="e#1625#2028#0" expanded="false" />
+            <element signature="e#2039#2446#0" expanded="false" />
+            <element signature="e#2470#2509#0" expanded="false" />
+            <element signature="e#2523#3001#0" expanded="false" />
+            <element signature="e#3020#3079#0" expanded="false" />
+            <element signature="e#3113#3212#0" expanded="false" />
+            <element signature="e#3237#3656#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -450,11 +462,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vue_demo/vue_add_tagdemo.html">
+    <entry file="file://$PROJECT_DIR$/vue_demo/js/ms_chip.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.888889">
-          <caret line="10" column="46" selection-start-line="10" selection-start-column="46" selection-end-line="10" selection-end-column="46" />
-          <folding />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#742#971#0" expanded="false" />
+            <element signature="e#1000#1139#0" expanded="false" />
+            <element signature="e#1182#1536#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -466,17 +483,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vue_demo/js/ms_chip.js">
+    <entry file="file://$PROJECT_DIR$/vue_demo/vue_add_tagdemo.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3838604">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#429#689#0" expanded="false" />
-            <element signature="e#742#971#0" expanded="false" />
-            <element signature="e#1000#1139#0" expanded="false" />
-            <element signature="e#1182#1536#0" expanded="false" />
-          </folding>
+        <state vertical-scroll-proportion="0.5448354">
+          <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+          <folding />
         </state>
       </provider>
     </entry>
