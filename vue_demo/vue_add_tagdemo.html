@@ -7,9 +7,10 @@
     <script src="https://cdn.bootcss.com/vue/2.5.13/vue.js"></script>
 </head>
 <body>
-    <div id="noc_system" class="container transit">
+    <div id="noc_system">
         <ms-chip
-                :phvalue="phvalue"></ms-chip>
+                :phvalue="phvalue"
+                v-bind:iparr="iparr"></ms-chip>
     </div>
     <script src="js/ms_chip.js"></script>
     <script src="js/index.js"></script>

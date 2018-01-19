@@ -3,21 +3,49 @@
 //chip-focuc 是输入框效果（完成后的）
 //无以上三者的效果输入正常的状态
 Vue.component('ms-chip',{
-    template:'<div :class="classObject" @click="focusIn($event)">' +
-    '<div class="chipLabel">{{ip_value}}</div>' +
-    '<input class="chipInput" :placeholder="placeholdervalue" v-model="ip_value">' +
-    '<div class="chipXbutton"></div></div>',
-    props: ['phvalue'],
+    template:'<div class="container transit">' +
+    '<div class="chip" :class="{\'chip-focuc\': isfocus,\'chip-empty\': index==ips.length-1,\'chip-empty-born\':index==ips.length-1}" @click="focusIn($event)" v-for="(item, index) in ips">' +
+    '<div class="chipLabel">{{item}}</div>' +
+    '<input class="chipInput" :placeholder="item" v-model="ips[index]">' +
+    '<div class="chipXbutton"></div>' +
+    '</div>' +
+    '</div>',
+    props: {
+        phvalue:{
+            type:String,
+            default:'请输入ip'
+        },
+        iparr:{
+            type:Array,
+            default:function(){
+                return [];
+            }
+        }
+    },
     data:function(){
         return {
-            classObject: {
-                'chip':true,
-                'chip-focuc': true,
-                'chip-empty': true,
-                'chip-empty-born':true
-            },
+            isfocus:false,
+            isempty:false,
+            //classObject: {
+            //    'chip':true,
+            //    'chip-focuc': false,
+            //    'chip-empty': false,
+            //    'chip-empty-born':false
+            //},
             ip_value:'',
-            placeholdervalue:this.phvalue
+            //placeholdervalue:this.phvalue,
+            ips:this.iparr
+        }
+    },
+    mounted:function(){
+        this.ips.push('wo shi xin xiang mu')
+    },
+    computed: {
+        classObject: function () {
+
+            return {
+
+            }
         }
     },
     methods:{
