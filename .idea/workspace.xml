@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="217bacd9-a867-4dbb-8fad-3e13d638886a" name="Default" comment="" />
+    <list default="true" id="217bacd9-a867-4dbb-8fad-3e13d638886a" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vue_demo/js/ms_chip.js" afterPath="$PROJECT_DIR$/vue_demo/js/ms_chip.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vue_demo/vue_add_tagdemo.html" afterPath="$PROJECT_DIR$/vue_demo/vue_add_tagdemo.html" />
+    </list>
     <ignored path="code.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,34 +29,9 @@
       <file leaf-file-name="vue_add_tagdemo.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vue_demo/vue_add_tagdemo.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.666667">
-              <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+            <state vertical-scroll-proportion="-6.2222223">
+              <caret line="7" column="35" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="add_tag.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vue_demo/add_tag.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.8888889">
-              <caret line="433" column="61" selection-start-line="433" selection-start-column="61" selection-end-line="433" selection-end-column="61" />
-              <folding>
-                <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="e#313#1364#0" expanded="false" />
-                <element signature="e#1379#1462#0" expanded="false" />
-                <element signature="e#1481#1804#0" expanded="false" />
-                <element signature="e#1819#2179#0" expanded="false" />
-                <element signature="e#2199#2259#0" expanded="false" />
-                <element signature="e#2292#2326#0" expanded="false" />
-                <element signature="e#2345#2876#0" expanded="false" />
-                <element signature="e#2895#3438#0" expanded="false" />
-                <element signature="e#3470#3533#0" expanded="false" />
-                <element signature="e#3555#4161#0" expanded="false" />
-                <element signature="e#4188#4271#0" expanded="false" />
-                <element signature="e#4321#4468#0" expanded="false" />
-                <element signature="e#4501#5024#0" expanded="false" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -69,8 +49,8 @@
       <file leaf-file-name="ms_chip.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/vue_demo/js/ms_chip.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2886133">
-              <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="27" selection-end-column="26" />
+            <state vertical-scroll-proportion="0.6031567">
+              <caret line="79" column="50" selection-start-line="79" selection-start-column="50" selection-end-line="79" selection-end-column="50" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -89,6 +69,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -98,8 +81,8 @@
         <option value="$PROJECT_DIR$/ivew/ivew_demo.html" />
         <option value="$PROJECT_DIR$/vue_demo/add_tag.html" />
         <option value="$PROJECT_DIR$/vue_demo/v_for_input实现双向数据绑定.html" />
-        <option value="$PROJECT_DIR$/vue_demo/vue_add_tagdemo.html" />
         <option value="$PROJECT_DIR$/vue_demo/js/index.js" />
+        <option value="$PROJECT_DIR$/vue_demo/vue_add_tagdemo.html" />
         <option value="$PROJECT_DIR$/vue_demo/js/ms_chip.js" />
       </list>
     </option>
@@ -122,7 +105,7 @@
     <OptionsSetting value="true" id="Update" />
     <OptionsSetting value="true" id="Status" />
     <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="2" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
@@ -281,7 +264,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.111979164" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.052083332" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -317,6 +300,55 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/vue_demo/vue_add_tagdemo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue_demo/add_tag.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="433" column="61" selection-start-line="433" selection-start-column="61" selection-end-line="433" selection-end-column="61" />
+          <folding>
+            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="e#313#1364#0" expanded="false" />
+            <element signature="e#1379#1462#0" expanded="false" />
+            <element signature="e#1481#1804#0" expanded="false" />
+            <element signature="e#1819#2179#0" expanded="false" />
+            <element signature="e#2199#2259#0" expanded="false" />
+            <element signature="e#2292#2326#0" expanded="false" />
+            <element signature="e#2345#2876#0" expanded="false" />
+            <element signature="e#2895#3438#0" expanded="false" />
+            <element signature="e#3470#3533#0" expanded="false" />
+            <element signature="e#3555#4161#0" expanded="false" />
+            <element signature="e#4188#4271#0" expanded="false" />
+            <element signature="e#4321#4468#0" expanded="false" />
+            <element signature="e#4501#5024#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue_demo/js/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue_demo/js/ms_chip.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ivew/ivew_demo.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -464,18 +496,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vue_demo/js/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vue_demo/add_tag.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.8888889">
-          <caret line="433" column="61" selection-start-line="433" selection-start-column="61" selection-end-line="433" selection-end-column="61" />
+        <state vertical-scroll-proportion="0.32690126">
+          <caret line="427" column="12" selection-start-line="427" selection-start-column="12" selection-end-line="427" selection-end-column="12" />
           <folding>
             <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
             <element signature="e#313#1364#0" expanded="false" />
@@ -497,16 +521,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/vue_demo/vue_add_tagdemo.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.666667">
-          <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+        <state vertical-scroll-proportion="-6.2222223">
+          <caret line="7" column="35" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue_demo/js/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vue_demo/js/ms_chip.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2886133">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="27" selection-end-column="26" />
+        <state vertical-scroll-proportion="0.6031567">
+          <caret line="79" column="50" selection-start-line="79" selection-start-column="50" selection-end-line="79" selection-end-column="50" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
