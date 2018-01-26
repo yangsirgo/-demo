@@ -2,19 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="217bacd9-a867-4dbb-8fad-3e13d638886a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vue/input-number.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vue/js/input-number.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vue/tabs.js.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vue/wendang.html.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vue/内联模板.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vue/异步组件.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vue_demo/bug解决/animation兼容IE.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vue_demo/css/chip.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vue_demo/huizhitu.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vue/自定义指令.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vue/自定义组件-clickouside.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vue/slot.html" afterPath="$PROJECT_DIR$/vue/slot.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vue_demo/add_tag.html" afterPath="$PROJECT_DIR$/vue_demo/add_tag.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vue_demo/js/ms_chip.js" afterPath="$PROJECT_DIR$/vue_demo/js/ms_chip.js" />
     </list>
     <ignored path="code.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,44 +25,33 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="add_tag.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/vue_demo/add_tag.html">
+      <file leaf-file-name="自定义指令.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vue/自定义指令.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.9432463">
-              <caret line="83" column="9" selection-start-line="83" selection-start-column="9" selection-end-line="83" selection-end-column="9" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#476#1477#0" expanded="false" />
-                <element signature="e#1567#1791#0" expanded="false" />
-                <element signature="e#1833#2004#0" expanded="false" />
-                <element signature="e#2047#2410#0" expanded="false" />
-                <element signature="e#2450#2659#0" expanded="false" />
-                <element signature="e#4326#4558#0" expanded="false" />
-              </folding>
+            <state vertical-scroll-proportion="-16.88889">
+              <caret line="19" column="16" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="chip.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vue_demo/css/chip.css">
+      <file leaf-file-name="自定义组件-clickouside.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/vue/自定义组件-clickouside.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.944445">
-              <caret line="86" column="13" selection-start-line="86" selection-start-column="13" selection-end-line="86" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.7820658">
+              <caret line="41" column="39" selection-start-line="41" selection-start-column="39" selection-end-line="41" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="内联模板.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vue/内联模板.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-4.4444447">
+              <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="73" />
               <folding>
-                <element signature="e#5#1206#0" expanded="false" />
-                <element signature="e#1781#1809#0" expanded="false" />
-                <element signature="e#4116#5025#0" expanded="false" />
-                <element signature="e#8365#8407#0" expanded="false" />
-                <element signature="e#8432#8492#0" expanded="false" />
-                <element signature="e#8729#8942#0" expanded="false" />
-                <element signature="e#9358#9716#0" expanded="false" />
-                <element signature="e#9717#10253#0" expanded="false" />
-                <element signature="e#10254#10787#0" expanded="false" />
-                <element signature="e#10788#11320#0" expanded="false" />
-                <element signature="e#11321#11852#0" expanded="false" />
-                <element signature="e#11853#12381#0" expanded="false" />
-                <element signature="e#12396#12576#0" expanded="false" />
-                <element signature="e#12588#12662#0" expanded="false" />
+                <marker date="1516668421286" expanded="true" signature="383:460" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -84,8 +63,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
-        <option value="HTML File" />
         <option value="CSS File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -114,6 +93,8 @@
         <option value="$PROJECT_DIR$/vue_demo/huizhitu.html" />
         <option value="$PROJECT_DIR$/vue_demo/css/chip.css" />
         <option value="$PROJECT_DIR$/vue_demo/add_tag.html" />
+        <option value="$PROJECT_DIR$/vue/自定义指令.html" />
+        <option value="$PROJECT_DIR$/vue/自定义组件-clickouside.html" />
       </list>
     </option>
   </component>
@@ -345,7 +326,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1924" height="1056" extended-state="1" />
+    <frame x="-8" y="-8" width="1924" height="1056" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13731655" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -384,22 +365,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/vue/tabs.js.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ivew/ivew_demo.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vue/js/input-number.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -705,20 +670,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vue/异步组件.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2905789">
-          <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue/内联模板.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.019296255">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vue_demo/bug解决/animation兼容IE.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="3.1600454">
@@ -815,9 +766,33 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/vue_demo/add_tag.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-19.527779">
+          <caret line="79" column="42" selection-start-line="79" selection-start-column="42" selection-end-line="79" selection-end-column="42" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#476#1477#0" expanded="false" />
+            <element signature="e#1567#1791#0" expanded="false" />
+            <element signature="e#1833#2004#0" expanded="false" />
+            <element signature="e#2047#2410#0" expanded="false" />
+            <element signature="e#2450#2659#0" expanded="false" />
+            <element signature="e#4326#4558#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/异步组件.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2905789">
+          <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/vue_demo/css/chip.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.944445">
+        <state vertical-scroll-proportion="0.65153235">
           <caret line="86" column="13" selection-start-line="86" selection-start-column="13" selection-end-line="86" selection-end-column="13" />
           <folding>
             <element signature="e#5#1206#0" expanded="false" />
@@ -838,19 +813,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vue_demo/add_tag.html">
+    <entry file="file://$PROJECT_DIR$/vue/内联模板.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9432463">
-          <caret line="83" column="9" selection-start-line="83" selection-start-column="9" selection-end-line="83" selection-end-column="9" />
+        <state vertical-scroll-proportion="-4.4444447">
+          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="73" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#476#1477#0" expanded="false" />
-            <element signature="e#1567#1791#0" expanded="false" />
-            <element signature="e#1833#2004#0" expanded="false" />
-            <element signature="e#2047#2410#0" expanded="false" />
-            <element signature="e#2450#2659#0" expanded="false" />
-            <element signature="e#4326#4558#0" expanded="false" />
+            <marker date="1516668421286" expanded="true" signature="383:460" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/自定义指令.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.88889">
+          <caret line="19" column="16" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/自定义组件-clickouside.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7820658">
+          <caret line="41" column="39" selection-start-line="41" selection-start-column="39" selection-end-line="41" selection-end-column="39" />
+          <folding />
         </state>
       </provider>
     </entry>
