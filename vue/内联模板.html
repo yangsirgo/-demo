@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.bootcss.com/vue/2.5.13/vue.min.js"></script>
+
+</head>
+<body>
+<div id="app" >
+    <app inline-template>
+        <!--inline-template 插槽不在起作用-->
+        <div>{{message}}</div>
+    </app>
+</div>
+<script>
+    Vue.component('app',{
+        template:'\
+            <div>\
+                hello\
+            <slot>来自负组件模板</slot>\
+            </div>\
+            \
+            '
+    })
+    var app = new Vue({
+        el:'#app',
+        data:{
+            message:'world'
+        }
+    })
+</script>
+</body>
+</html>

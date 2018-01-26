@@ -20,6 +20,13 @@ Vue.component('ms-chip',{
             default:function(){
                 return [];
             }
+        },
+        callback: {
+            default:function(){
+                return function callback() {
+                    // todo
+                }
+            }
         }
     },
     data:function(){
@@ -29,8 +36,14 @@ Vue.component('ms-chip',{
             ips:this.iparr
         }
     },
-    mounted:function(){
+    created:function(){
         this.ips.push(' ');
+    },
+    mounted:function(){
+        document.addEventListener('click',this.clickedHandler,false);
+    },
+    beforeDestroy:function(){
+        document.removeEventListener('click',this.clickedHandler,false);
     },
     methods:{
         clickHandler:function(event,index){
@@ -100,7 +113,7 @@ Vue.component('ms-chip',{
 
                 return false;
             }
-            document.addEventListener('click',clickedHandler,false);
+
         }
     }
 })

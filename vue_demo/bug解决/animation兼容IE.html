@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        @keyframes chipRemoval{
+            0%{
+                /*display: inline-block;*/
+                opacity: 1;
+                /*margin:10px;*/
+                /*padding-right:10px;*/
+                /*padding-left:10px;*/
+            }
+            50%{
+                display: inline-block;
+                opacity: 0.5;
+            }
+            99%{
+                display: inline-block;
+                width: 0;
+                height: 0;
+                opacity: 0.5;
+                /*margin:0;*/
+                /*padding-right:0;*/
+                /*padding-left:0;*/
+                /*display: none;*/
+            }
+            100%{
+                width: 0;
+                /*height: 0;*/
+                opacity: 0;
+                /*margin:0;*/
+                /*padding-right:0;*/
+                /*padding-left:0;*/
+                /*display: none;*/
+            }
+        }
+        .chip{
+            /*position: relative;*/
+            display: inline-block;
+            height: 42px;
+            width: 140px;
+            background: #403950;
+            /*margin: 10px;*/
+            /*border-radius: 21px;*/
+            /*cursor: pointer;*/
+            /*padding-right: 10px;*/
+            /*padding-left: 10px;*/
+            overflow: hidden;
+        }
+        .chip-removing{
+            transform-origin:0%;
+            -webkit-animation: chipRemoval 10s;
+            -moz-animation: chipRemoval 1s;
+            -o-animation: chipRemoval 1s;
+            -ms-animation: chipRemoval 1s;
+        }
+    </style>
+</head>
+<body id="container">
+<div class="chip" id="chipToRemove">
+    <p>我是目标我是目标</p>
+</div>
+<div class="chip" id="chipToRemove1">
+    <p>我是目标我是目标</p>
+</div>
+<div class="chip" id="chipToRemove2">
+    <p>我是目标我是目标</p>
+</div>
+<script>
+    chipToRemove.addEventListener('click',function(event){
+        chipToRemove.className = 'chip chip-removing';
+        (event.target).style.display = 'none';
+        chipToRemove.addEventListener("animationend",function(event){
+
+            container.removeChild(event.target);
+        },false)
+    });
+    chipToRemove1.addEventListener('click',function(event){
+        chipToRemove1.className = 'chip chip-removing';
+        (event.target).style.display = 'none';
+        chipToRemove1.addEventListener("animationend",function(event){
+            console.log('zhixing');
+
+            container.removeChild(event.target);
+        },false)
+    });
+    chipToRemove2.addEventListener('click',function(event){
+        chipToRemove2.className = 'chip chip-removing';
+        (event.target).style.display = 'none';
+        chipToRemove2.addEventListener("animationend",function(event){
+            console.log('zhixing');
+            container.removeChild(event.target);
+        },false)
+    });
+</script>
+</body>
+</html>
