@@ -29,18 +29,59 @@
             height: 150px;
             margin: 5px 0;
             background-color: #fff;
+            box-shadow: 0 1px 6px green;
         }
         .dropdown p{
             display: inline-block;
             padding: 6px;
         }
     </style>
+    <script src="https://cdn.bootcss.com/vue/2.5.13/vue.js"></script>
 </head>
 <body>
 <div id="app" v-cloak>
-    <div class="main" v-clickoutside="handleClose">
-        <button @click="show"></button>
+    <div class="main" v-clickoutside='closed'>
+        <button @click="show = !show"></button>
+        <div class="dropdown" v-show='show'>
+            <p>下拉框内容,点击外部区域可以关闭</p>
+        </div>
     </div>
 </div>
+<script>
+    Vue.directive('clickoutside',{
+        bind:function(el,binding,vnode){
+            console.log(binding);
+            console.log(vnode);
+            function documentHandler(e){
+                if(el.contains(e.target)){
+                    return false;
+                }
+                console.log(e);
+                if(binding.expression){
+                    binding.value(e)
+                }
+            }
+            el._vueClick = documentHandler;
+            document.addEventListener('click',documentHandler)
+        },
+        unbind:function(el,binding){
+            document.removeEventListener('click',el._vueClick);
+            delete el._vueClick;
+        }
+    })
+
+    var app = new Vue({
+        el:'#app',
+        data:{
+            show:true
+        },
+        methods:{
+            closed:function(e){
+                console.log(e);
+                this.show = false;
+            }
+        }
+    })
+</script>
 </body>
 </html>
