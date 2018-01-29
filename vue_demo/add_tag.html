@@ -28,7 +28,8 @@
             input.className="chipInput";
             console.log(content);
             if(content!= null){
-                this.input.placeholder = this.content
+                this.input.placeholder = this.content;
+                this.input.value = this.content;
             }else{
                 this.input.placeholder ="";
             }
@@ -88,7 +89,6 @@
             for(i in chips){
                 if((event.target == chips[i].element )||
                         (event.target == chips[i].xButton)){
-
                     var chipObj = chips[i];
                     var chipElement = chipObj.element;
                     var xButton = chipObj.xButton;
