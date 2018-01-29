@@ -9,185 +9,188 @@
     <div style="margin-top: 50px"></div>
     <div id="container" class="container transit"></div>
     <script>
-        var container = document.getElementById("container");
-        var chips = new Array();
-        container.chipOnFocus = Chip;
-        container.chipInitiator = Chip;
-        var Chip = function(contnt){
-            this.element = document.createElement("div");
-            this.element.className = "chip";
-            this.mode= "regular";
-            var content = contnt;
-            var label =   document.createElement("div");
-            var input = document.createElement("input");
-            this.content= content;
-            this.label= label;
-            this.input= input;
-            label.innerHTML= content;
-            label.className="chipLabel";
-            input.className="chipInput";
-            console.log(content);
-            if(content!= null){
-                this.input.placeholder = this.content;
-                this.input.value = this.content;
-            }else{
-                this.input.placeholder ="";
-            }
-            this.element.appendChild(label);
-            this.element.appendChild(input);
-            var xButton =     document.createElement("div");
-            this.xButton = xButton;
-            this.xButton.className = "chipXbutton";
-            this.element.appendChild(this.xButton);
-        }
-        /****prototype methods****/
-
-        Chip.prototype.updateChipContent= function(){
-            if(this.input.value !== ""){
-                this.content = this.input.value;
-                this.label.innerHTML = this.content;
-                this.input.placeholder = this.content;
-            }
-
-        }
-        Chip.prototype.focusIn=function(){
-            this.element.className = "";
-            this.element.className = "chip chip-focus";
-            this.input.focus();
-            this.mode="focus";
-        }
-        Chip.prototype.focusOut=function(){
-            this.element.className = "";
-            this.element.className = "chip";
-            this.updateChipContent();
-            if(this.content == null){
-                if(this == container.chipInitiator){
-                    this.empty();
+        (function(){
+            var container = document.getElementById("container");
+            var chips = new Array();
+            container.chipOnFocus = Chip;
+            container.chipInitiator = Chip;
+            var Chip = function(contnt){
+                this.element = document.createElement("div");
+                this.element.className = "chip";
+                this.mode= "regular";
+                var content = contnt;
+                var label =   document.createElement("div");
+                var input = document.createElement("input");
+                this.content= content;
+                this.label= label;
+                this.input= input;
+                label.innerHTML= content;
+                label.className="chipLabel";
+                input.className="chipInput";
+                console.log(content);
+                if(content!= null){
+                    this.input.placeholder = this.content;
+                    this.input.value = this.content;
                 }else{
-                    container.removeChip(this);
+                    this.input.placeholder ="";
                 }
+                this.element.appendChild(label);
+                this.element.appendChild(input);
+                var xButton =     document.createElement("div");
+                this.xButton = xButton;
+                this.xButton.className = "chipXbutton";
+                this.element.appendChild(this.xButton);
             }
-        }
-        Chip.prototype.empty=function(){
-            this.element.className = "chip chip-empty";
-            this.content = null;
-            this.label.innerHTML = '';
-            this.input.value = null;
-            this.mode = "empty";
-        }
+            /****prototype methods****/
 
+            Chip.prototype.updateChipContent= function(){
+                if(this.input.value !== ""){
+                    this.content = this.input.value;
+                    this.label.innerHTML = this.content;
+                    this.input.placeholder = this.content;
+                }
 
-        function createChip(chipName){
-            var chip = new Chip(chipName);
-            chips.push(chip);
-            container.appendChild(chip.element);
-            return(chip)
-        }
-
-
-        function containerClicked(event){
-            for(i in chips){
-                if((event.target == chips[i].element )||
-                        (event.target == chips[i].xButton)){
-                    var chipObj = chips[i];
-                    var chipElement = chipObj.element;
-                    var xButton = chipObj.xButton;
-                    var label = chipObj.label;
-                    var input = chipObj.input;
-//                    console.log(event.target.className);
-                    if (event.target == xButton){
-                        if(chipObj.mode == "empty"){
-                            setChipFocus(chipObj);
-                        }else{
-                            removeChip(chipObj);
-                        }
-                    }else if(event.target == chipElement){
-                        setChipFocus(chipObj);
+            }
+            Chip.prototype.focusIn=function(){
+                this.element.className = "";
+                this.element.className = "chip chip-focus";
+                this.input.focus();
+                this.mode="focus";
+            }
+            Chip.prototype.focusOut=function(){
+                this.element.className = "";
+                this.element.className = "chip";
+                this.updateChipContent();
+                if(this.content == null){
+                    if(this == container.chipInitiator){
+                        this.empty();
+                    }else{
+                        container.removeChip(this);
                     }
-
                 }
             }
-            if(event.target==container){
-                unfocusAll();
+            Chip.prototype.empty=function(){
+                this.element.className = "chip chip-empty";
+                this.content = null;
+                this.label.innerHTML = '';
+                this.input.value = null;
+                this.mode = "empty";
             }
-            window.event? window.event.cancelBubble = true : e.stopPropagation();
-        }
 
-        function setChipFocus(chip){
-            container.chipOnFocus = chip;
-            for (i in chips){
-                if(chips[i] == chip){
-                    chips[i].focusIn();
-                }else if ((chips[i] != Chip) &&(chips[i].mode=="focus")){
-                    chips[i].focusOut();
+
+            function createChip(chipName){
+                var chip = new Chip(chipName);
+                chips.push(chip);
+                container.appendChild(chip.element);
+                return(chip)
+            }
+
+
+            function containerClicked(event){
+                for(i in chips){
+                    if((event.target == chips[i].element )||
+                            chips[i].element.contains(event.target)){
+                        var chipObj = chips[i];
+                        var chipElement = chipObj.element;
+                        var xButton = chipObj.xButton;
+                        var label = chipObj.label;
+                        var input = chipObj.input;
+//                    console.log(event.target.className);
+                        if (event.target == xButton){
+                            if(chipObj.mode == "empty"){
+                                setChipFocus(chipObj);
+                            }else{
+                                removeChip(chipObj);
+                            }
+                        }else if(event.target == chipElement || event.target == label){
+                            setChipFocus(chipObj);
+                        }
+                    }
+                }
+                if(event.target==container){
+                    unfocusAll();
+                }
+                window.event? window.event.cancelBubble = true : e.stopPropagation();
+            }
+
+            function setChipFocus(chip){
+                container.chipOnFocus = chip;
+                for (i in chips){
+                    if(chips[i] == chip){
+                        chips[i].focusIn();
+                    }else if ((chips[i] != Chip) &&(chips[i].mode=="focus")){
+                        chips[i].focusOut();
+                    }
                 }
             }
-        }
 
-        function unfocusAll(){
-            container.chipOnFocus= null;
-            for (i in chips){
-                if(chips[i].mode!="empty"){
-                    chips[i].focusOut();
+            function unfocusAll(){
+                container.chipOnFocus= null;
+                for (i in chips){
+                    if(chips[i].mode!="empty"){
+                        chips[i].focusOut();
+                    }
+                }
+                checkForInitiator();
+            }
+
+            //判断是否是IE浏览器，包括Edge浏览器
+            function IEVersion() {
+                var userAgent = navigator.userAgent;
+                if (!!window.ActiveXObject || "ActiveXObject" in window)
+                    return "IE";
+                else if (userAgent.indexOf("Edge") > -1) {
+                    return "IE"
+                }
+                else {
+                    return "-1";
+                }
+
+            }
+
+            function removeChip(chipToRemove){
+                chipToRemove.element.className= "chip chip-removing";
+
+                if(IEVersion() == 'IE'){//            针对IE做处理
+                    chipToRemove.element.style.display = 'none';
+                }
+                chipToRemove.element.addEventListener("animationend",chipDeleting,false)
+                matchChip(chipToRemove);
+            }
+
+            function matchChip(chip){
+                chips.forEach(function(elem,index){
+                    if(elem.content==chip.content&&elem.element===chip.element){
+                        chips.splice(index, 1);
+                        return false;
+                    }
+                })
+            }
+
+            function createEmptyChip(){
+                var chip = createChip();
+                chip.element.class = "chip";
+                //alert(chips.indexOf(chip));
+                chip.empty();
+                return(chip);
+                chips.push(chip);
+            }
+            function chipDeleting(event){
+                container.removeChild(event.target);
+            }
+            function makeChipInitiator(){
+                container.chipInitiator = createEmptyChip();
+                container.chipInitiator.element.className = "chip chip-empty chip-empty-born";
+            }
+            function checkForInitiator(){
+                if(container.chipInitiator.content != null){
+                    makeChipInitiator();
                 }
             }
-            checkForInitiator();
-        }
+            container.addEventListener('click', containerClicked);
+        })();
 
-        //判断是否是IE浏览器，包括Edge浏览器
-        function IEVersion() {
-            var userAgent = navigator.userAgent;
-            if (!!window.ActiveXObject || "ActiveXObject" in window)
-                return "IE";
-            else if (userAgent.indexOf("Edge") > -1) {
-                return "IE"
-            }
-            else {
-                return "-1";
-            }
 
-        }
-
-        function removeChip(chipToRemove){
-            chipToRemove.element.className= "chip chip-removing";
-
-            if(IEVersion() == 'IE'){//            针对IE做处理
-                chipToRemove.element.style.display = 'none';
-            }
-            chipToRemove.element.addEventListener("animationend",chipDeleting,false)
-            matchChip(chipToRemove);
-        }
-
-        function matchChip(chip){
-            chips.forEach(function(elem,index){
-                if(elem.content==chip.content&&elem.element===chip.element){
-                    chips.splice(index, 1);
-                    return false;
-                }
-            })
-        }
-
-        function createEmptyChip(){
-            var chip = createChip();
-            chip.element.class = "chip";
-            //alert(chips.indexOf(chip));
-            chip.empty();
-            return(chip);
-            chips.push(chip);
-        }
-        function chipDeleting(event){
-            container.removeChild(event.target);
-        }
-        function makeChipInitiator(){
-            container.chipInitiator = createEmptyChip();
-            container.chipInitiator.element.className = "chip chip-empty chip-empty-born";
-        }
-        function checkForInitiator(){
-            if(container.chipInitiator.content != null){
-                makeChipInitiator();
-            }
-        }
-        container.addEventListener('click', containerClicked);
         createChip("John");
         createChip("George");
         createChip("Paul");

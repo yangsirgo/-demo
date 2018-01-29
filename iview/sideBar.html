@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- 引入Vue -->
+    <script src="https://cdn.bootcss.com/vue/2.0.0/vue.min.js"></script>
+    <link rel="stylesheet" href="//unpkg.com/iview/dist/styles/iview.css">
+    <!-- 引入组件库 -->
+    <script src="//unpkg.com/iview@2.8.0/dist/iview.js"></script>
+    <script src="http://192.168.2.4/nocportal/js/jquery-3.2.1.min.js"></script>
+    <style>
+        .layout{
+            border: 1px solid #d7dde4;
+            background: #f5f7f9;
+            position: relative;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        .layout-header-bar{
+            background: #fff;
+            box-shadow: 0 1px 1px rgba(0,0,0,.1);
+        }
+        .layout-logo-left{
+            width: 90%;
+            height: 30px;
+            background: #5b6270;
+            border-radius: 3px;
+            margin: 15px auto;
+        }
+        .menu-icon{
+            transition: all .3s;
+        }
+        .rotate-icon{
+            transform: rotate(-90deg);
+        }
+        .menu-item span{
+            display: inline-block;
+            overflow: hidden;
+            width: 69px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            vertical-align: bottom;
+            transition: width .2s ease .2s;
+        }
+        .menu-item i{
+            transform: translateX(0px);
+            transition: font-size .2s ease, transform .2s ease;
+            vertical-align: middle;
+            font-size: 16px;
+        }
+        .collapsed-menu span{
+            width: 0px;
+            transition: width .2s ease;
+        }
+        .collapsed-menu i{
+            transform: translateX(5px);
+            transition: font-size .2s ease .2s, transform .2s ease .2s;
+            vertical-align: middle;
+            font-size: 22px;
+        }
+    </style>
+</head>
+<body id="app">
+<div data-v-500777ba="">
+    <div data-v-78d3d5f3="" data-v-500777ba=""  class="layout">
+        <div data-v-78d3d5f3="" class="ivu-layout ivu-layout-has-sider">
+            <div data-v-78d3d5f3="" id="sideBar" class="ivu-layout-sider" style="width: 200px; min-width: 200px; max-width: 200px; flex: 0 0 200px;">
+                <div class="ivu-layout-sider-children">
+                    <ul data-v-78d3d5f3="" class="ivu-menu ivu-menu-dark ivu-menu-vertical menu-item" style="width: auto;">
+                        <li data-v-78d3d5f3="" class="ivu-menu-item">
+                            <i data-v-78d3d5f3="" class="ivu-icon ivu-icon-ios-navigate"></i>
+                            <span data-v-78d3d5f3="">Option 1</span>
+                        </li>
+                        <li data-v-78d3d5f3="" class="ivu-menu-item ivu-menu-item-active ivu-menu-item-selected">
+                            <i data-v-78d3d5f3="" class="ivu-icon ivu-icon-search"></i>
+                            <span data-v-78d3d5f3="">Option 2</span>
+                        </li>
+                        <li data-v-78d3d5f3="" class="ivu-menu-item">
+                            <i data-v-78d3d5f3="" class="ivu-icon ivu-icon-settings"></i>
+                            <span data-v-78d3d5f3="">Option 3</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="ivu-layout-sider-trigger" style="width: 200px; display: none;">
+                    <i class="ivu-icon ivu-icon-chevron-left ivu-layout-sider-trigger-icon"></i>
+                </div>
+            </div>
+            <div data-v-78d3d5f3="" class="ivu-layout">
+                <div data-v-78d3d5f3="" class="layout-header-bar ivu-layout-header" style="padding: 0px;">
+                    <i data-v-78d3d5f3="" id="sideBar_button" class="ivu-icon ivu-icon-navicon-round menu-icon" style="font-size: 24px; margin: 20px 20px 0px;"></i>
+                </div>
+                <div data-v-78d3d5f3="" class="ivu-layout-content" style="margin: 20px; background: rgb(255, 255, 255); min-height: 260px;">
+                Content
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<script>
+    sideBar_button.addEventListener('click',function(e){
+        $(e.target).toggleClass('rotate-icon');
+        $('#sideBar').toggleClass('ivu-layout-sider-collapsed');
+        $('#sideBar').find('ul').toggleClass('collapsed-menu')
+        if( !$('#sideBar').find('ul').hasClass('collapsed-menu')){
+            $('#sideBar').css({
+                'width':'200px',
+                'min-width':'200px',
+                'max-width':'200px',
+                "flex":'0 0 200px'
+            });
+        }else{
+            $('#sideBar').css({
+                'width':'78px',
+                'min-width':'78px',
+                'max-width':'78px',
+                "flex":'0 0 78px'
+            });
+        }
+    })
+</script>
