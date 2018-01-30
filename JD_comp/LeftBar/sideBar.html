@@ -1,0 +1,376 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <!-- meta.jsp -->
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <meta http-equiv="Cache-Control" content="no-store"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="0"/>
+    <!-- meta.jsp END-->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>金盾NOC</title>
+    <!--页面标题金盾logo-->
+    <link href='http://192.168.2.4/nocportal/skin/blue/images/logoblack.ico' rel='icon' type='image/x-ico' />
+    <!--初始化样式-->
+    <link href="http://192.168.2.4/nocportal/skin/blue/css/init.css" rel="stylesheet" type="text/css" />
+    <!--整体结构-->
+    <link href="http://192.168.2.4/nocportal/skin/blue/css/world.css" rel="stylesheet" type="text/css">
+    <!--右侧顶部-->
+    <link href="http://192.168.2.4/nocportal/skin/blue/css/wtop.css" rel="stylesheet" type="text/css" />
+    <!--左侧菜单CSS-->
+    <link href="http://192.168.2.4/nocportal/skin/blue/css/leftmenu.css" rel="stylesheet" type="text/css" />
+    <!--渲染上色-->
+    <link href="http://192.168.2.4/nocportal/skin/blue/css/face/blue.css" rel="stylesheet" type="text/css" />
+    <!--弹框样式-->
+    <link href="http://192.168.2.4/nocportal/skin/blue/css/window/window.css" rel="stylesheet" type="text/css">
+    <!--公共库jquery-->
+    <script src="http://192.168.2.4/nocportal/js/jquery-3.2.1.min.js"></script>
+
+</head>
+
+<body>
+<div id="world">
+    <!-- leftmenu START-->
+    <div id="menus">
+        <div id="wlogo"></div>
+        <div id="menubtn"></div>
+        <div id="menulist">
+            <ul class="mul0">
+
+                <li class="mli0">
+                    <a class="ma0" href="http://192.168.2.4/nocportal/homepage.do?navId=1">
+                        <span class="mname icon1 namehide">首页</span>
+                    </a>
+
+                </li>
+
+                <li class="mli0">
+                    <a class="ma0" href="javascript:void(0);">
+                        <span class="mname icon2 namehide">网络</span>
+                    </a>
+
+                    <ul class="mul1">
+                        <div class="listhover"></div>
+
+
+                        <li class="mli1"><a class="ma1" href="http://192.168.2.4/nocportal/network/topology.do?navId=8" id="navUp">网络拓扑</a>
+
+                        </li>
+
+                        <li class="mli1"><a class="ma1" href="http://192.168.2.4/nocportal/network/ipmanager/ipmanager.do?navId=9" id="navUp">IP资源管理</a>
+
+                        </li>
+
+                    </ul>
+
+                </li>
+
+                <li class="mli0">
+                    <a class="ma0" href="javascript:void(0);">
+                        <span class="mname icon3 namehide">监控</span>
+                    </a>
+
+                    <ul class="mul1">
+                        <div class="listhover"></div>
+
+
+                        <li class="mli1"><a class="ma1" href="http://192.168.2.4/nocportal/monitor/resource.do?navId=10" id="navUp">资源</a>
+
+                        </li>
+
+                        <li class="mli1"><a class="ma1" href="http://192.168.2.4/nocportal/policy/main.do?navId=11" id="navUp">策略</a>
+
+                        </li>
+
+                    </ul>
+
+                </li>
+
+                <li class="mli0">
+                    <a class="ma0" href="javascript:void(0);">
+                        <span class="mname icon10 namehide">业务</span>
+                    </a>
+
+                    <ul class="mul1">
+                        <div class="listhover"></div>
+
+
+                        <li class="mli1"><a class="ma1" href="http://192.168.2.4/nocportal/business/businesslist.do?navId=26" id="navUp">业务列表</a>
+
+                        </li>
+
+                        <li class="mli1"><a class="ma1" href="http://192.168.2.4/nocportal/business/topology.do?navId=27" id="navUp">业务拓扑</a>
+
+                        </li>
+
+                    </ul>
+
+                </li>
+
+                <li class="mli0">
+                    <a class="ma0" href="http://192.168.2.4/nocportal/iot/show/index.do?navId=33">
+                        <span class="mname icon12 namehide">机房</span>
+                    </a>
+
+                    <ul class="mul1">
+                        <div class="listhover"></div>
+
+
+                        <li class="mli1"><a class="ma1" href="http://192.168.2.4/nocportal/iot/show/index.do?navId=34" id="navUp">机房设施</a>
+
+                        </li>
+
+                        <li class="mli1"><a class="ma1" href="http://192.168.2.4/nocportal/iot/templet/index.do?navId=35" id="navUp">机房设施模板</a>
+
+                        </li>
+
+                    </ul>
+
+                </li>
+
+                <li class="mli0">
+                    <a class="ma0" href="http://192.168.2.4/nocportal/wlan/index.do?navId=32">
+                        <span class="mname icon11 namehide">无线</span>
+                    </a>
+
+                </li>
+
+                <li class="mli0">
+                    <a class="ma0" href="javascript:void(0);">
+                        <span class="mname icon5 namehide">告警</span>
+                    </a>
+
+                    <ul class="mul1">
+                        <div class="listhover"></div>
+
+
+                        <li class="mli1"><a class="ma1" href="http://192.168.2.4/nocportal/alarms/alarmlist.do?navId=12" id="navUp">告警</a>
+
+                        </li>
+
+                        <li class="mli1"><a class="ma1" href="http://192.168.2.4/nocportal/events/eventlist.do?navId=13" id="navUp">事件</a>
+
+                        </li>
+
+                    </ul>
+
+                </li>
+
+                <li class="mli0">
+                    <a class="ma0" href="http://192.168.2.4/nocportal/report/reportlist.do?navId=6">
+                        <span class="mname icon6 namehide">报表</span>
+                    </a>
+
+                </li>
+
+                <li class="mli0">
+                    <a class="ma0" href="javascript:void(0);">
+                        <span class="mname icon7 namehide">系统</span>
+                    </a>
+
+                    <ul class="mul1">
+                        <div class="listhover"></div>
+
+                        <input type="hidden" name="systemnavlength" value="5" id="systemnavlength">
+
+
+                        <li class="mli1"><a class="ma1" href="http://192.168.2.4/nocportal/basicConf/emailAlarm.do?navId=15" id="navUp">系统配置</a>
+
+                            <ul class="mul2">
+                                <div class="listhover2"></div>
+
+                                <li class="mli2"><a class="ma2" href="http://192.168.2.4/nocportal/admin/ipSetting.do?navId=28" id="navUp28">基础配置</a></li>
+
+                                <li class="mli2"><a class="ma2" href="http://192.168.2.4/nocportal/basicConf/emailAlarm.do?navId=19" id="navUp19">邮件告警</a></li>
+
+                                <li class="mli2"><a class="ma2" href="http://192.168.2.4/nocportal/basicConf/SMSAlarm.do?navId=20" id="navUp20">短信告警</a></li>
+
+                            </ul>
+
+                        </li>
+
+                        <li class="mli1"><a class="ma1" href="http://192.168.2.4/nocportal/system/usermgr.do?navId=16" id="navUp">人员组织</a>
+
+                            <ul class="mul2">
+                                <div class="listhover2"></div>
+
+                                <li class="mli2"><a class="ma2" href="http://192.168.2.4/nocportal/system/usermgr.do?navId=21" id="navUp21">用户</a></li>
+
+                                <li class="mli2"><a class="ma2" href="http://192.168.2.4/nocportal/system/department/departmentlist.do?navId=22" id="navUp22">单位</a></li>
+
+                                <li class="mli2"><a class="ma2" href="http://192.168.2.4/nocportal/system/accesspermission/accesspermission.do?navId=23" id="navUp23">职位</a></li>
+
+                                <li class="mli2"><a class="ma2" href="http://192.168.2.4/nocportal/system/resourceGroup/resourcelist.do?navId=24" id="navUp24">资源组</a></li>
+
+                            </ul>
+
+                        </li>
+
+                        <li class="mli1"><a class="ma1" href="http://192.168.2.4/nocportal/basicConf/itomlist.do?navId=29" id="navUp">集成配置</a>
+
+                            <ul class="mul2">
+                                <div class="listhover2"></div>
+
+                                <li class="mli2"><a class="ma2" href="http://192.168.2.4/nocportal/system/nacp/nacplist.do?navId=31" id="navUp31">准入配置</a></li>
+
+                                <li class="mli2"><a class="ma2" href="http://192.168.2.4/nocportal/basicConf/itomlist.do?navId=30" id="navUp30">运维管理</a></li>
+
+                                <li class="mli2"><a class="ma2" href="http://192.168.2.4/nocportal/system/omslist.do?navId=36" id="navUp36">工单配置</a></li>
+
+                            </ul>
+
+                        </li>
+
+                        <li class="mli1"><a class="ma1" href="http://192.168.2.4/nocportal/audit.do?navId=17" id="navUp">审计日志</a>
+
+                        </li>
+
+                        <li class="mli1"><a class="ma1" href="http://192.168.2.4/nocportal/system/about/about.do?navId=18" id="navUp">关于</a>
+
+                        </li>
+
+                    </ul>
+
+                </li>
+
+            </ul>
+        </div>
+    </div>
+    <!-- leftmenu END-->
+    <!--content-->
+    <div id="wcontent" style="left:52px">
+        <script type="text/javascript">
+            var ctx = "http://192.168.2.4/nocportal";
+            var ctxface = "blue";
+            var csrfName= "_csrf";//后台获取的数据设置为变量则所有js文件均可读取
+            var csrfValue="5582f171-d38d-40aa-b114-465f1a377ac5";
+        </script>
+        <!-- 用户退出FORM START-->
+        <form action="/nocportal/logout.do" method="post" id="logoutForm">
+            <input type="hidden" name="_csrf" value="6d446447-dba8-41b4-9b09-735443679b25">
+        </form>
+        <!-- 用户退出FORM end-->
+        <div id="wtop">
+            <div id="wtright">
+                <div class="nav-top">
+                    <!--navtestright 头菜单 start-->
+                    <div class="nav-topright">
+                        <div class="nav-topright">
+                            <ul>
+                                <li id="alarmRemindNum" style="display:none;">
+                                    <div class="selectbluebtn" style="position:relative">
+                                        <div class="selectbluebtnicon hex-alarm"></div>
+                                        <div class="btnname">告警</div>
+                                        <div class="alarmNum" id="alarmNumReminder">
+                                        </div>
+                                        <input type="hidden" value="" id="timescopReminder">
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="selectbluebtn">
+                                        <div class="selectbluebtnicon hex-discovery"></div>
+                                        <div class="btnname">发现</div>
+
+                                        <div class="rltv">
+                                            <div class="btnselector" style="display: none;">
+                                                <div class="btnlistarrow1"></div>
+                                                <div class="btnlistarrow">
+                                                    <ul>
+                                                        <li><img src="http://192.168.2.4/nocportal/skin/blue/images/icons/blue/icon10.png"></li>
+                                                        <li><img src="http://192.168.2.4/nocportal/skin/blue/images/icons/blue/icon1.png"></li>
+                                                        <li><img src="http://192.168.2.4/nocportal/skin/blue/images/icons/blue/icon2.png"></li>
+                                                        <li><img src="http://192.168.2.4/nocportal/skin/blue/images/icons/blue/icon8.png"></li>
+                                                        <li><img src="http://192.168.2.4/nocportal/skin/blue/images/icons/blue/icon3.png"></li>
+                                                    </ul>
+                                                </div>
+                                                <ul class="btnselectorlist">
+                                                    <li><a href="javascript:discoverySetting()">发现配置</a></li>
+                                                    <li><a href="javascript:globalDiscovery()">全网发现</a></li>
+                                                    <li><a href="javascript:singleDiscovery()">单个资源</a></li>
+                                                    <li><a href="javascript:netSegDiscovery()">网段发现</a></li>
+                                                    <li><a href="javascript:excelImport()">Excel导入</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <input type="hidden" value="" id="isUserRole">
+                                <input type="hidden" value="" id="isOperatorRole">
+                                <input type="hidden" value="1" id="isSuperRole">
+                                <li>
+                                    <div class="selectbluebtn">
+                                        <div class="selectbluebtnicon hex-user"></div>
+                                        <div class="btnname" id="user_name">
+                                            超级管理员
+                                        </div>
+                                        <input type="hidden" value="1" id="user_id">
+                                        <input type="hidden" value="0" id="user_visible">
+                                        <input type="hidden" value="0" id="alarm_reminder">
+                                        <div class="rltv">
+                                            <div class="btnselector " style="display: none;">
+                                                <div class="btnlistarrow1"></div>
+                                                <div class="btnlistarrow">
+                                                    <ul>
+                                                        <li><img src="http://192.168.2.4/nocportal/skin/blue/images/icons/blue/icon4.png"></li>
+
+
+                                                        <li><img id="reminderImg" src="http://192.168.2.4/nocportal/skin/blue/images/icons/blue/icon11.png"></li>
+
+
+                                                        <audio id="alarmSound" preload="auto">
+                                                            <source src="http://192.168.2.4/nocportal/skin/blue/audio/1.mp3" type="audio/mpeg">
+                                                        </audio>
+
+                                                        <li><img src="http://192.168.2.4/nocportal/skin/blue/images/icons/blue/icon9.png"></li>
+                                                        <li><img src="http://192.168.2.4/nocportal/skin/blue/images/icons/blue/icon7.png"></li>
+                                                    </ul>
+                                                </div>
+                                                <ul class="btnselectorlist">
+                                                    <li><a href="javascript:curUserInfo()">用户信息</a></li>
+
+                                                    <li><a href="javascript:updateReminder()">告警提醒</a></li>
+
+                                                    <li><a href="javascript:tabFace()">换肤</a></li>
+                                                    <li><a href="javascript:$('#logoutForm').submit()">退出</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div id="allscreen" title="全屏">
+                                        <div class="selectbluebtn"><div class="btnname">全屏</div></div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--navright  头菜单 start END-->
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <!--上方导航结束-->
+        <!--右上角退出全屏按钮 start-->
+        <div id="exit_allscreen" title="退出全屏" style="display: none">
+            <img src="http://192.168.2.4/nocportal/skin/blue/images/icons/hex-fullscreen_leave.png" />
+        </div>
+        <!--右上角退出全屏按钮 end-->
+        <!--主要内容部分 start-->
+        <div class="main_right">
+            <h1>主要内容</h1>
+        </div>
+        <!--主要内容部分 end-->
+    </div>
+</div>
+<!--左侧菜单JS START-->
+<!--<script src="./js/leftBar.js"></script>-->
+<script src="http://192.168.2.4/nocportal/js/screen.js"></script>
+<script src="http://192.168.2.4/nocportal/js/menu.js"></script>
+<!--左侧菜单JS END-->
+<script src="http://192.168.2.4/nocportal/js/wtop.js"></script>
+<script src="http://192.168.2.4/nocportal/js/maintop.js"></script>
+<script src="http://192.168.2.4/nocportal/js/window.js" type="text/javascript"></script>
+</body>
+</html>
