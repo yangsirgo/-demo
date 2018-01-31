@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="/nocportal/skin/blue/css/face/blue.css" rel="stylesheet" type="text/css">
+    <link href="/nocportal/skin/blue/css/dataTables/dataTablesgray.css" rel="stylesheet" type="text/css">
+    <link href="/nocportal/skin/blue/css/audit/audit.css" rel="stylesheet" type="text/css">
+    <script src="/nocportal/js/jquery-3.2.1.min.js"></script>
+    <script src="/nocportal/js/window.js" type="text/javascript"></script>
+    <script>
+        var ctx = "http://192.168.2.4/nocportal";
+        var ctxface = "blue";
+        var csrfName= "_csrf";//后台获取的数据设置为变量则所有js文件均可读取
+        var csrfValue="c16c626a-0d2d-41b8-b889-85a9c055631a";
+    </script>
+    <script src="/nocportal/js/layout/inpage.js" type="text/javascript"></script>
+    <script src="/nocportal/js/plugins/dataTables/js/jquery.dataTables.js"></script>
+    <script src="/nocportal/js/plugins/dataTables/js/jquery.dataTables.js"></script>
+    <script src="/nocportal/js/alarm/moment.js"></script>
+    <script src="/nocportal/js/alarm/daterangepicker.js"></script>
+    <script src="audit.js"></script>
+</head>
+<body>
+    <div id="inrightcontent">
+        <div class="datalisttable">
+            <table class="datalist display" id="auditlog">
+                <thead>
+                <tr>
+                    <th>
+                        <input type="checkbox" id="selectAll">
+                    </th>
+                    <th>时间</th>
+                    <th>操作人</th>
+                    <th>客户端IP</th>
+                    <th>模块</th>
+                    <th>操作</th>
+                    <th>操作对象</th>
+                </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
