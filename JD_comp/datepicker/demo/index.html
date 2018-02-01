@@ -26,7 +26,12 @@
     <input  id="reservation" type="text" class="inputtime" readonly placeholder="请选择时间">
 </div>
 
+<input class="search_input iptbg active" type="text" id="timescope" value="" readonly="readonly" style="width:250px;">
+
 <script>
+
+
+
     $(document).ready(function() {
         $('#reservation').daterangepicker(null, function(start, end, label) {
             console.log(start);
