@@ -93,21 +93,28 @@
                                    autocomplete="off"
                                    v-model="username"
                                    @keyup.enter="loginHandler"
+                                   @input="changeHanler"
                                    v-focus>
-                            <span class="icondp iconfont icon-list-input-delete" v-show="isDelete"></span>
+                            <span class="icondp iconfont icon-list-input-delete"
+                                  v-show="isDelete"
+                                  @click="deleteUser"></span>
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="form-group-in-pass"  :class="{'shake-horizontal':passwordshake}">
                             <span class="iconfont icon-icon-password1"></span>
-                            <input id="password" value="" name="password" type="password" class="password form-control in"
+                            <input id="password" value="" name="password" class="password form-control in"
+                                   :type="isPsw"
                                    onpaste="return false"
                                    oncontextmenu="return false"
                                    oncopy="return false"
                                    oncut="return false"
                                    v-model="password"
-                                   @keyup.enter="loginHandler">
-                            <span class="icondp iconfont icon-list-show-password" v-show="isSee"></span>
+                                   @keyup.enter="loginHandler"
+                                   @input="changeHanler">
+                            <span class="icondp iconfont icon-list-show-password"
+                                  v-show="isSee"
+                                  @click="seePsw"></span>
                         </div>
                     </div>
                     <div class="login">
@@ -144,7 +151,8 @@
             usernameshake:false,
             passwordshake:false,
             isDelete:false,
-            isSee:false
+            isSee:false,
+            isPsw:'password'
         },
         methods:{
             loginHandler:function(){
@@ -182,6 +190,23 @@
                         function(result){
                         console.log(result);
                     });
+            },
+            changeHanler:function(e){
+                console.log(e.target);
+                if(e.target.id === 'name'){
+                    this.isDelete = true;
+                };
+                if(e.target.id === 'password'){
+                    this.isSee = true;
+                }
+            },
+            seePsw:function(){
+                var _t = this;
+                _t.isPsw == 'text'?_t.isPsw = 'password':_t.isPsw = 'text'
+            },
+            deleteUser:function(){
+                this.username = '';
+                this.isDelete = false;
             }
         }
     })
