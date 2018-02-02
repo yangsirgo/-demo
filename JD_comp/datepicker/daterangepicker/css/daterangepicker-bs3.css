@@ -278,3 +278,82 @@ width:500px;
 .daterangepicker th.month {
   width: auto;
 }
+
+
+
+/*
+* 金盾UI样式
+* @20180201
+*
+*/
+
+*{margin:0px;padding:0px;}
+.daterangepicker {
+  font-size: 14px;
+}
+.daterangepicker .range_inputs .btn-success {
+  color: #ffffff;
+  background-color: #5faee3;
+  border-color: #4cae4c;
+}
+.daterangepicker .range_inputs .btn-default {
+  color: #333333;
+  background-color: #ffffff;
+  border-color: #cccccc;
+}
+
+.daterangepicker .calendar-date {
+  background-color: #fff;
+}
+.daterangepicker .range_inputs .btn {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.428571429;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+.daterangepicker .calendar .next {
+  font-size: 0px;
+  text-indent: -9999px;
+  background-image: url(../images/next.png);
+  background-position: center center;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.daterangepicker .calendar .prev {
+  font-size: 0px;
+  text-indent: -9999px;
+  background-image: url(../images/previous.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.daterangepicker .calendar select {
+  border: 1px solid #e5e5e5;
+}
+
+.daterangepicker .calendar select {
+  font-family: "Microsoft YaHei","SimHei","SimSun";
+}
+
+.daterangepicker {
+  display: none;
+  background: #e5e5e5;
+}
+
+

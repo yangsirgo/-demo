@@ -1,0 +1,211 @@
+@charset "utf-8";
+@font-face
+{
+    font-family:tabfont;
+    src: url('../../font/Dosis-Regular.ttf');
+}
+/* CSS Document */
+* { margin:0; padding:0; }
+body {height:100%;background-image:url(../../images/login/1.jpg)}
+img { border:none; }
+.clear{clear:both;}
+#contain li{
+    height:50px;
+    line-height:23px;
+    font-size:22px;
+    overflow:hidden;
+    font-family:tabfont;
+    font-family: Dosis,Arial;
+    display:none;
+}
+
+#page-container {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    overflow: hidden;
+    margin-top: -20px;
+}
+
+.main {
+    width: 100%;
+    height: 100%;
+    float: left;
+    margin-top: -70px;
+    margin-bottom: 50px;
+}
+.login_box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -190px;
+    width: 380px;
+    height: 345px;
+    background: hsla(209, 0%, 100%, .3);
+}
+.login_title {
+    font-family:Verdana, Arial, Helvetica, sans-serif;
+    font-size:21px;
+    color:#FFF;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+    color:#f1f0ee;
+    padding-top:14px;
+    height:85px;
+    font-weight: normal;
+    width:342px;
+}
+
+.login_logo {
+    height: 55px;
+    margin-top: 220px;
+    width:126px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.login_logo img {
+    width:126px;
+}
+
+.login_msg {
+    text-align: center;
+    font-size: 16px;
+}
+
+.login_form {
+
+    font-size: 16px;
+}
+
+.login_box .form-control {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    font-size: 18px;
+    height:43px;
+}
+
+.login_box .form-group {
+    margin-left:auto;
+    margin-right:auto;
+    margin-top: 17px;
+    width:280px;
+}
+.login_box .form-group-in-user {
+    /*background: #f5f5f5 url(../../images/login/login-user.png) 4px 12px no-repeat;*/
+    background-color: #f5f5f5;
+    width:258px;
+    height:43px;
+    /*padding-left:22px;*/
+}
+.login_box .form-group-in-pass {
+    /*background: #f5f5f5 url(../../images/login/login-password.png) 4px 12px no-repeat;*/
+    background-color: #f5f5f5;
+    width:258px;
+    height:43px;
+    /*padding-left:22px;*/
+}
+.login_box .form-group label.t {
+    width: 120px;
+    text-align: right;
+    cursor: pointer;
+}
+
+.login_box .form-group img {
+    margin-top: 1px;
+    height: 32px;
+    vertical-align: top;
+}
+
+.login_box .m {
+    cursor: pointer;
+}
+
+.login_button {
+    height: 40px;
+    line-height:40px;
+    width:280px;
+    background: #32c6d2;
+    border-style: none;
+    color: #FFF;
+    text-align: center;
+    font-family:"Microsoft YaHei";
+    font-size: 18px;
+    text-decoration: none;
+    cursor:pointer;
+}
+
+.login_box .form-group input[type=text] {
+    border:0px;
+    width:235px;
+    background-color:#f5f5f5;
+    font-family:"Microsoft YaHei";
+    font-size: 16px;
+    outline:none;
+}
+
+.login_box .form-group input[type=password] {
+    width:235px;
+    border:0px;
+    background-color:#f5f5f5;
+    font-family:"Microsoft YaHei";
+    font-size: 16px;
+    outline:none;
+}
+
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+    -webkit-box-shadow : 0 0 0px 1000px #f5f5f5 inset ;
+}
+.login {
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:17px;
+    width:280px;
+}
+
+.bottom {
+    font-size: 14px;
+    color: #FFF;
+    text-align: center;
+}
+
+.copyright_text {
+    text-align: center;
+    color: #b7b7b7;
+}
+
+.errorMessage {
+    font-size: 14px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:15px;
+    line-height:24px;
+    background-color:#f5f5f5;
+    color: #FF6600;
+    width: 280px;
+    text-align: center;
+    color: #FF6600;
+    font-weight: normal;
+    font-family:"Microsoft YaHei";
+}
+#contain{
+    overflow:hidden;list-style:none;margin:0px;padding:0px;
+    height:75px;
+}
+.uploadlicense{text-decoration:none;color:#3882FF;padding-left:8px;}
+.uploadlicense:hover{color:#1C66E3;}
+
+#supersized {  display:block; position:fixed; left:0; top:0; overflow:hidden; z-index:-999; height:100%; width:100%; }
+#supersized img { width:auto; height:auto; position:relative; display:none; outline:none; border:none; }
+#supersized.speed img { -ms-interpolation-mode:nearest-neighbor; image-rendering: -moz-crisp-edges; }
+#supersized.quality img { -ms-interpolation-mode:bicubic; image-rendering: optimizeQuality; }
+#supersized li { display:block; list-style:none; z-index:-30; position:fixed; overflow:hidden; top:0; left:0; width:100%; height:100%; background:#111; }
+#supersized a { width:100%; height:100%; display:block; }
+#supersized li.prevslide { z-index:-20; }
+#supersized li.activeslide { z-index:-10; }
+#supersized li.image-loading img{ visibility:hidden; }
+#supersized li.prevslide img, #supersized li.activeslide img{ display:inline; }
+#supersized img { max-width: none !important }

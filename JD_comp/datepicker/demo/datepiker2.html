@@ -3,18 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <!--<link href="http://10.10.17.5/tsa/skin/blue/css/bootstrap.min.css" rel="stylesheet" type="text/css">-->
     <link href="../daterangepicker/css/daterangepicker-bs3.css" rel="stylesheet" type="text/css">
-    <style>
-        .daterangepicker {
-            display: none;
-            background: #e5e5e5;
-        }
-
-    </style>
-    <script src="http://10.10.17.5/tsa/js/jquery-1.11.0.min.js"></script>
-    <script src="http://10.10.17.5/tsa/js/timepicker/moment.js"></script>
-    <script src="http://10.10.17.5/tsa/js/timepicker/daterangepicker.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="../daterangepicker/js/moment.js"></script>
+    <script src="../daterangepicker/js/daterangepicker.js"></script>
 </head>
 <body>
     <input type="text" id="timescope" value="" readonly="readonly" style="width:250px;">
@@ -22,15 +14,16 @@
         $("#timescope").daterangepicker({
             startDate: moment().subtract('days', 1).format('YYYY/MM/DD HH:00'),//上一天的时间
             endDate: moment().format('YYYY/MM/DD HH:00'),//今天的时间
-            timePicker: true,
-            timePicker24Hour: true,
-            timePickerSeconds: false,
-            timePicker12Hour:false,
-            timePickerIncrement: 5,
-            format: 'YYYY/MM/DD HH:mm'
+            timePicker: true,//是否显示时间项
+            timePicker24Hour: true,//一天24小时制
+            timePickerSeconds: false,//取消时间中秒的部分
+            timePicker12Hour:false,//取消AM和PM的时间部分
+            timePickerIncrement: 5,//时间部分以五分钟递增
+            format: 'YYYY/MM/DD HH:mm'//全局格式化时间
         },function(start, end, label){
             console.log(start.format('YYYY/MM/DD HH:mm'));//2018/01/24 00:00
             console.log(end.format('YYYY/MM/DD HH:mm'));//2018/02/01 23:59
+            /* 在此增加回调函数 */
         });
     </script>
 </body>

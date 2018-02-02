@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>金盾NOC</title>
+    <link href="./css/login.css" rel="stylesheet">
+    <link rel="icon" href="http://192.168.2.4/nocportal/skin/blue/images/logoblack.ico" type="image/x-ico" />
+    <link rel="stylesheet" href="css/iconfont/font_1/iconfont.css">
+    <link rel="stylesheet" href="css/iconfont/font_b/iconfont.css">
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="http://192.168.2.4/nocportal/js/html5.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="http://192.168.2.4/nocportal/js/jquery-3.2.1.min.js"></script>
+    <script src="https://cdn.bootcss.com/vue/2.5.13/vue.js"></script>
+    <script type="text/javascript" src="http://192.168.2.4/nocportal/js/login/login.js"></script>
+    <style>
+        .shake-horizontal {
+            -webkit-animation-name: shake-horizontal;
+            -ms-animation-name: shake-horizontal;
+            animation-name: shake-horizontal;
+            -webkit-animation-duration: 100ms;
+            -ms-animation-duration: 100ms;
+            animation-duration: 100ms;
+            -webkit-animation-iteration-count: 2;
+            -ms-animation-iteration-count: 2;
+            animation-iteration-count: 2;
+            -webkit-animation-timing-function: ease-in-out;
+            -ms-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+            -webkit-animation-delay: 0s;
+            -ms-animation-delay: 0s;
+            animation-delay: 0s;
+            -webkit-animation-play-state: running;
+            -ms-animation-play-state: running;
+            animation-play-state: running;
+        }
+        @-webkit-keyframes shake-horizontal {
+            2% { -webkit-transform: translate(-3px, 0px) rotate(0deg); }
+            50% { -webkit-transform: translate(0px, 0px) rotate(0deg); }
+            98% { -webkit-transform: translate(3px, 0px) rotate(0deg); }
+        }
+        @-ms-keyframes shake-horizontal {
+            2% { -ms-transform: translate(-3px, 0px) rotate(0deg); }
+            50% { -ms-transform: translate(0px, 0px) rotate(0deg); }
+            98% { -ms-transform: translate(3px, 0px) rotate(0deg); }
+        }
+        @-o-keyframes shake-horizontal {
+            2% { -o-transform: translate(-3px, 0px) rotate(0deg); }
+            50% { -o-transform: translate(0px, 0px) rotate(0deg); }
+            98% { -o-transform: translate(3px, 0px) rotate(0deg); }
+        }
+        @keyframes shake-horizontal {
+            2% { transform: translate(-3px, 0px) rotate(0deg); }
+            50% { transform: translate(0px, 0px) rotate(0deg); }
+            98% { transform: translate(3px, 0px) rotate(0deg); }
+        }
+        .iconfont{
+            position: relative;
+            top: 1px;
+            display: inline-block;
+        }
+        /* 去掉眼睛和叉叉 */
+        ::-ms-clear{display: none;}
+        ::-ms-reveal{display: none;}
+        .icondp{
+            float: right;
+            top: -30px;
+            left: -10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body style="background-color:#000;background-size:100% 100%;background-repeat:no-repeat;background-attachment:fixed;">
+<div id="page-container">
+    <div class="main">
+        <div class="login_logo">
+            <img src="http://192.168.2.4/nocportal/skin/blue/images/login/logo-big.png">
+        </div>
+        <div class="login_box">
+            <div class="login_title">
+                <ul id="contain">
+                    <li>Work's simple, Work's good.</li>
+                </ul>
+            </div>
+            <div class="login_form">
+                <!--<form id="loginForm" name='loginForm' action="http://192.168.2.4/nocportal/login" method='POST'>-->
+                    <div class="form-group">
+                        <div class="form-group-in-user" :class="{'shake-horizontal':usernameshake}">
+                            <span class="iconfont icon-menu-user1"></span>
+                            <input id="name" value="" name="username" type="text" class="form-control in"
+                                   autocomplete="off"
+                                   v-model="username"
+                                   @keyup.enter="loginHandler"
+                                   v-focus>
+                            <span class="icondp iconfont icon-list-input-delete" v-show="isDelete"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-group-in-pass"  :class="{'shake-horizontal':passwordshake}">
+                            <span class="iconfont icon-icon-password1"></span>
+                            <input id="password" value="" name="password" type="password" class="password form-control in"
+                                   onpaste="return false"
+                                   oncontextmenu="return false"
+                                   oncopy="return false"
+                                   oncut="return false"
+                                   v-model="password"
+                                   @keyup.enter="loginHandler">
+                            <span class="icondp iconfont icon-list-show-password" v-show="isSee"></span>
+                        </div>
+                    </div>
+                    <div class="login">
+                        <label class="t"></label>
+                        <div id="submit_btn" class="login_button"
+                             @click.prevent="loginHandler">
+                            <span id="loginsubmitword">&nbsp;登&nbsp;录&nbsp;</span>
+                        </div>
+                    </div>
+                    <input type="hidden" name="_csrf" value="56e6e7da-0d0f-4275-bb20-8fd2fc8dfb86" />
+                    <div class="errorMessage" id="errorMessage" v-show="error">
+                        用户名或密码不正确
+                    </div>
+                <!--</form>-->
+            </div>
+        </div>
+    </div>
+</div>
+<script language="JavaScript">
+
+    Vue.directive('focus',{
+        inserted:function(el){
+            el.focus();
+        }
+    })
+
+    var app = new Vue({
+        el:'#page-container',
+        data:{
+            username:'',
+            password:'',
+            _csrf:"56e6e7da-0d0f-4275-bb20-8fd2fc8dfb86",
+            error:false,
+            usernameshake:false,
+            passwordshake:false,
+            isDelete:false,
+            isSee:false
+        },
+        methods:{
+            loginHandler:function(){
+                if(this.username&&this.password){
+                    this.ajaxPost();
+                }else{
+                    if((this.username == '')&&(this.password == '')){
+                        this.usernameshake = true;
+                    }
+                    if(this.password == ''&&this.username != ''){
+                        this.passwordshake = true;
+                    }
+                    if(this.username == ''&&this.password != ''){
+                        this.usernameshake = true;
+                    }
+                    this.error = true;
+                    this.initShakeClass();
+                }
+            },
+            initShakeClass:function(){
+                var t_ = this;
+                setTimeout(function(){
+                    t_.passwordshake = false;
+                    t_.usernameshake = false;
+                },120)
+            },
+            ajaxPost:function(){
+                var t_ = this;
+                $.post("/nocportal/login",
+                        {
+                            username:t_.username,
+                            password:t_.password,
+                            _csrf:t_._csrf
+                        },
+                        function(result){
+                        console.log(result);
+                    });
+            }
+        }
+    })
+
+</script>
+</body>
+</html>

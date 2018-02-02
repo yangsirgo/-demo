@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--<link rel="stylesheet" href="../css/jquery-clockpicker.min.css">-->
+    <link href="http://192.168.3.96/nocportal/skin/blue/css/plugins/clockpicker/bootstrap-clockpicker.min.css" rel="stylesheet" type="text/css">
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <!--<script src="../js/jquery-clockpicker.min.js"></script>-->
+    <script src="http://192.168.3.96/nocportal/js/plugins/clockpicker/bootstrap-clockpicker.min.js" type="text/javascript"></script>
+</head>
+<body>
+    <div class="input-group clockpicker" data-autoclose="true">
+        <input type="text" class="form-control valid" style="cursor:pointer" name="startTime" id="timeday" value="9:00" aria-invalid="false">
+                <span class="input-group-addon">
+                <span class="glyphicon glyphicon-time"></span> </span>
+    </div>
+</body>
+</html>
+<script type="text/javascript">
+    $('#timeday').clockpicker();
+</script>
