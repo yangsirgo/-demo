@@ -1,0 +1,40 @@
+.shake-horizontal {
+    -webkit-animation-name: shake-horizontal;
+    -ms-animation-name: shake-horizontal;
+    animation-name: shake-horizontal;
+    -webkit-animation-duration: 100ms;
+    -ms-animation-duration: 100ms;
+    animation-duration: 100ms;
+    -webkit-animation-iteration-count: 2;
+    -ms-animation-iteration-count: 2;
+    animation-iteration-count: 2;
+    -webkit-animation-timing-function: ease-in-out;
+    -ms-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-delay: 0s;
+    -ms-animation-delay: 0s;
+    animation-delay: 0s;
+    -webkit-animation-play-state: running;
+    -ms-animation-play-state: running;
+    animation-play-state: running;
+}
+@-webkit-keyframes shake-horizontal {
+    2% { -webkit-transform: translate(-3px, 0px) rotate(0deg); }
+    50% { -webkit-transform: translate(0px, 0px) rotate(0deg); }
+    98% { -webkit-transform: translate(3px, 0px) rotate(0deg); }
+}
+@-ms-keyframes shake-horizontal {
+    2% { -ms-transform: translate(-3px, 0px) rotate(0deg); }
+    50% { -ms-transform: translate(0px, 0px) rotate(0deg); }
+    98% { -ms-transform: translate(3px, 0px) rotate(0deg); }
+}
+@-o-keyframes shake-horizontal {
+    2% { -o-transform: translate(-3px, 0px) rotate(0deg); }
+    50% { -o-transform: translate(0px, 0px) rotate(0deg); }
+    98% { -o-transform: translate(3px, 0px) rotate(0deg); }
+}
+@keyframes shake-horizontal {
+    2% { transform: translate(-3px, 0px) rotate(0deg); }
+    50% { transform: translate(0px, 0px) rotate(0deg); }
+    98% { transform: translate(3px, 0px) rotate(0deg); }
+}

@@ -7,76 +7,18 @@
     <link href="./css/login.css" rel="stylesheet">
     <link rel="icon" href="http://192.168.2.4/nocportal/skin/blue/images/logoblack.ico" type="image/x-ico" />
     <link rel="stylesheet" href="css/iconfont/font_1/iconfont.css">
-    <link rel="stylesheet" href="css/iconfont/font_b/iconfont.css">
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-    <script type="text/javascript" src="http://192.168.2.4/nocportal/js/html5.js"></script>
-    <![endif]-->
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/shake.css">
+    <link rel="stylesheet" href="css/tooltip.css">
     <script type="text/javascript" src="http://192.168.2.4/nocportal/js/jquery-3.2.1.min.js"></script>
     <script src="https://cdn.bootcss.com/vue/2.5.13/vue.js"></script>
-    <script type="text/javascript" src="http://192.168.2.4/nocportal/js/login/login.js"></script>
-    <style>
-        .shake-horizontal {
-            -webkit-animation-name: shake-horizontal;
-            -ms-animation-name: shake-horizontal;
-            animation-name: shake-horizontal;
-            -webkit-animation-duration: 100ms;
-            -ms-animation-duration: 100ms;
-            animation-duration: 100ms;
-            -webkit-animation-iteration-count: 2;
-            -ms-animation-iteration-count: 2;
-            animation-iteration-count: 2;
-            -webkit-animation-timing-function: ease-in-out;
-            -ms-animation-timing-function: ease-in-out;
-            animation-timing-function: ease-in-out;
-            -webkit-animation-delay: 0s;
-            -ms-animation-delay: 0s;
-            animation-delay: 0s;
-            -webkit-animation-play-state: running;
-            -ms-animation-play-state: running;
-            animation-play-state: running;
-        }
-        @-webkit-keyframes shake-horizontal {
-            2% { -webkit-transform: translate(-3px, 0px) rotate(0deg); }
-            50% { -webkit-transform: translate(0px, 0px) rotate(0deg); }
-            98% { -webkit-transform: translate(3px, 0px) rotate(0deg); }
-        }
-        @-ms-keyframes shake-horizontal {
-            2% { -ms-transform: translate(-3px, 0px) rotate(0deg); }
-            50% { -ms-transform: translate(0px, 0px) rotate(0deg); }
-            98% { -ms-transform: translate(3px, 0px) rotate(0deg); }
-        }
-        @-o-keyframes shake-horizontal {
-            2% { -o-transform: translate(-3px, 0px) rotate(0deg); }
-            50% { -o-transform: translate(0px, 0px) rotate(0deg); }
-            98% { -o-transform: translate(3px, 0px) rotate(0deg); }
-        }
-        @keyframes shake-horizontal {
-            2% { transform: translate(-3px, 0px) rotate(0deg); }
-            50% { transform: translate(0px, 0px) rotate(0deg); }
-            98% { transform: translate(3px, 0px) rotate(0deg); }
-        }
-        .iconfont{
-            position: relative;
-            top: 1px;
-            display: inline-block;
-        }
-        /* 去掉眼睛和叉叉 */
-        ::-ms-clear{display: none;}
-        ::-ms-reveal{display: none;}
-        .icondp{
-            float: right;
-            top: -30px;
-            left: -10px;
-            cursor: pointer;
-        }
-    </style>
 </head>
 <body style="background-color:#000;background-size:100% 100%;background-repeat:no-repeat;background-attachment:fixed;">
-<div id="page-container">
+<div id="page-container" v-cloak>
     <div class="main">
         <div class="login_logo">
-            <img src="http://192.168.2.4/nocportal/skin/blue/images/login/logo-big.png">
+            <!-- 项目图片logo -->
+            <!--<img src="http://192.168.2.4/nocportal/skin/blue/images/login/logo-big.png">-->
         </div>
         <div class="login_box">
             <div class="login_title">
@@ -85,36 +27,42 @@
                 </ul>
             </div>
             <div class="login_form">
-                <!--<form id="loginForm" name='loginForm' action="http://192.168.2.4/nocportal/login" method='POST'>-->
                     <div class="form-group">
                         <div class="form-group-in-user" :class="{'shake-horizontal':usernameshake}">
-                            <span class="iconfont icon-menu-user1"></span>
+                            <span class="icon_p iconfont icon-nav-user icon_color"></span>
                             <input id="name" value="" name="username" type="text" class="form-control in"
                                    autocomplete="off"
                                    v-model="username"
                                    @keyup.enter="loginHandler"
                                    @input="changeHanler"
                                    v-focus>
-                            <span class="icondp iconfont icon-list-input-delete"
+                            <span class="icondp iconfont icon-list-input-delete icon_color"
                                   v-show="isDelete"
                                   @click="deleteUser"></span>
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="form-group-in-pass"  :class="{'shake-horizontal':passwordshake}">
-                            <span class="iconfont icon-icon-password1"></span>
-                            <input id="password" value="" name="password" class="password form-control in"
+                            <span class="icon_p iconfont icon-nav-access icon_color"></span>
+                            <input id="password" value="" name="password" autocomplete="new-password" class="password form-control in"
                                    :type="isPsw"
                                    onpaste="return false"
                                    oncontextmenu="return false"
                                    oncopy="return false"
                                    oncut="return false"
                                    v-model="password"
-                                   @keyup.enter="loginHandler"
+                                   @keyup="checkCapsLockKeyUp($event)"
+                                   @keypress="checkCapsLock($event)"
+                                   @focus="isFocus"
+                                   @blur="isBlur"
                                    @input="changeHanler">
-                            <span class="icondp iconfont icon-list-show-password"
+                            <span class="icondp iconfont icon-list-show-password icon_color"
                                   v-show="isSee"
                                   @click="seePsw"></span>
+                        </div>
+                        <div class="tooltip tooltip-pos" :aria-hidden="!isCaplock" x-placement="bottom">
+                            <div class="tooltip-arrow" style="left: 19px;"></div>
+                            <div class="tooltip-inner">大小写锁定已打开</div>
                         </div>
                     </div>
                     <div class="login">
@@ -128,13 +76,11 @@
                     <div class="errorMessage" id="errorMessage" v-show="error">
                         用户名或密码不正确
                     </div>
-                <!--</form>-->
             </div>
         </div>
     </div>
 </div>
-<script language="JavaScript">
-
+<script>
     Vue.directive('focus',{
         inserted:function(el){
             el.focus();
@@ -146,15 +92,64 @@
         data:{
             username:'',
             password:'',
-            _csrf:"56e6e7da-0d0f-4275-bb20-8fd2fc8dfb86",
+            _csrf:"56e6e7da-0d0f-4275-bb20-8fd2fc8dfb86",//用户token
             error:false,
             usernameshake:false,
             passwordshake:false,
             isDelete:false,
             isSee:false,
-            isPsw:'password'
+            isPsw:'password',
+            capsLockState:'',
+            isCaplock:false,
+            isFocusBoo:false
+        },
+        mounted:function(){
+            document.msCapsLockWarningOff = true;//针对IE自定义capslock事件
         },
         methods:{
+            isFocus:function(){
+                this.isFocusBoo = true;
+            },
+            isBlur:function(){
+                this.isFocusBoo = false;
+            },
+            checkCapsLock:function(event){
+//                console.log(event);
+                var keyCode = event.keyCode || event.which;
+                var isShift = event.shiftKey || (keyCode == 16) || false;
+                console.log(keyCode);
+                console.log('isShift:'+isShift);
+                var c1 = (keyCode >= 65 && keyCode <= 90) && ! isShift; // Caps Lock 打开，且没有按住shift键
+                var c2 = (keyCode >= 97 && keyCode <= 122) && isShift; // Caps Lock 打开，且按住shift键
+                var c3 = (keyCode >= 65 && keyCode <= 90) && isShift; // Caps Lock 关闭，且按住shift键
+                var c4 = (keyCode >= 97 && keyCode <= 122) && ! isShift; // Caps Lock 关闭，且没有按住shift键
+                if (c1 || c2) {
+                    this.capsLockState = 'on';
+                }
+                if (c3 || c4) {
+                    this.capsLockState = 'off';
+                }
+                console.log(c1);
+                console.log(c2);
+                console.log(c3);
+                console.log(c4);
+            },
+            checkCapsLockKeyUp:function(event){
+//                console.log(event);
+                var e = event || window.event;
+//                console.log(e.keyCode);
+//                console.log(this.capsLockState);
+                if (e.keyCode == 20 && this.capsLockState != '') {
+                    if (this.capsLockState == 'on') {
+                        this.capsLockState = 'off';
+                    } else {
+                        this.capsLockState = 'on';
+                    }
+                }
+                if(e.keyCode == 13){
+                    this.ajaxPost();
+                }
+            },
             loginHandler:function(){
                 if(this.username&&this.password){
                     this.ajaxPost();
@@ -188,16 +183,30 @@
                             _csrf:t_._csrf
                         },
                         function(result){
-                        console.log(result);
-                    });
+                            if(result.status=='success'){
+                                window.location.href = 'www.baidu.com';//跳转到主页面
+                            }else if(result.status=='error'){
+                                switch(result.code) {
+                                    case 1://密码错误
+                                        if(!t_.isSee){
+                                            t_.password = '';
+                                        }
+                                        t_.error = true;
+                                        break;
+                                    case 2://用户名错误
+                                        t_.error = true;
+                                        break;
+                                }
+                            }
+                        });
             },
             changeHanler:function(e){
-                console.log(e.target);
-                if(e.target.id === 'name'){
-                    this.isDelete = true;
+                var tar_ = e.target;
+                if(tar_.id === 'name'){
+                    tar_.value == ''?this.isDelete = false:this.isDelete = true;
                 };
-                if(e.target.id === 'password'){
-                    this.isSee = true;
+                if(tar_.id === 'password'){
+                    tar_.value == ''?this.isSee = false:this.isSee = true;
                 }
             },
             seePsw:function(){
@@ -207,6 +216,17 @@
             deleteUser:function(){
                 this.username = '';
                 this.isDelete = false;
+            }
+        },
+        watch:{
+            capsLockState:function(n,o){
+                console.log(n);
+                console.log(o);
+                if(n == 'on'&&this.isFocusBoo){
+                    this.isCaplock = true;
+                }else{
+                    this.isCaplock = false;
+                }
             }
         }
     })
