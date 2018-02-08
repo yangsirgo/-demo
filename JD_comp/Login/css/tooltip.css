@@ -7,7 +7,7 @@
     background: #f5f5f5;
     color: BLACK;
     border-radius: 2px;
-    padding: 4px 10px 3px;
+    padding: 5px 10px 4px;
     border: #bfbfbf 1px solid;
 }
 
@@ -37,15 +37,15 @@
 }
 
 .tooltip[x-placement^="bottom"] {
-    margin-top: 5px;
+    margin-top: 7px;
 }
 
 .tooltip[x-placement^="bottom"] .tooltip-arrow {
-    border-width: 0 5px 5px 5px;
+    border-width: 0 5px 7px 5px;
     border-left-color: transparent !important;
     border-right-color: transparent !important;
     border-top-color: transparent !important;
-    top: -4px;
+    top: -6px;
     left: calc(50% - 5px);
     margin-top: 0;
     margin-bottom: 0;
@@ -107,7 +107,8 @@
 .tooltip-pos{
     position: absolute;
     transform: translate3d(11px, 52px, 0px);
-    top: 168px;
-    left: 39px;
+    top: 143px;
+    left: 71px;
+    font-size: 14px;
     will-change: transform;
 }

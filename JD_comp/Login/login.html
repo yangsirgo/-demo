@@ -3,14 +3,12 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>金盾NOC</title>
-    <link href="./css/login.css" rel="stylesheet">
-    <link rel="icon" href="http://192.168.2.4/nocportal/skin/blue/images/logoblack.ico" type="image/x-ico" />
+    <title>金盾</title>
+    <!--<link rel="icon" href="http://192.168.2.4/nocportal/skin/blue/images/logoblack.ico" type="image/x-ico" />-->
     <link rel="stylesheet" href="css/iconfont/font_1/iconfont.css">
     <link rel="stylesheet" href="css/login.css">
-    <link rel="stylesheet" href="css/shake.css">
     <link rel="stylesheet" href="css/tooltip.css">
-    <script type="text/javascript" src="http://192.168.2.4/nocportal/js/jquery-3.2.1.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdn.bootcss.com/vue/2.5.13/vue.js"></script>
 </head>
 <body style="background-color:#000;background-size:100% 100%;background-repeat:no-repeat;background-attachment:fixed;">
@@ -28,7 +26,7 @@
             </div>
             <div class="login_form">
                     <div class="form-group">
-                        <div class="form-group-in-user" :class="{'shake-horizontal':usernameshake}">
+                        <div class="form-group-in-user" id="usernameShake">
                             <span class="icon_p iconfont icon-nav-user icon_color"></span>
                             <input id="name" value="" name="username" type="text" class="form-control in"
                                    autocomplete="off"
@@ -42,7 +40,7 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <div class="form-group-in-pass"  :class="{'shake-horizontal':passwordshake}">
+                        <div class="form-group-in-pass"  id="passwordShake">
                             <span class="icon_p iconfont icon-nav-access icon_color"></span>
                             <input id="password" value="" name="password" autocomplete="new-password" class="password form-control in"
                                    :type="isPsw"
@@ -53,12 +51,14 @@
                                    v-model="password"
                                    @keyup="checkCapsLockKeyUp($event)"
                                    @keypress="checkCapsLock($event)"
-                                   @focus="isFocus"
-                                   @blur="isBlur"
+                                   @focus="isFocusBoo = true"
+                                   @blur="isFocusBoo = false;"
                                    @input="changeHanler">
-                            <span class="icondp iconfont icon-list-show-password icon_color"
+                            <span class="icondp iconfont icon-list-show-password icon_color icon_font"
                                   v-show="isSee"
-                                  @click="seePsw"></span>
+                                  @mouseup="mouseupHanler($event)"
+                                  @mousedown="isPsw = 'text'"
+                            ></span>
                         </div>
                         <div class="tooltip tooltip-pos" :aria-hidden="!isCaplock" x-placement="bottom">
                             <div class="tooltip-arrow" style="left: 19px;"></div>
@@ -69,12 +69,12 @@
                         <label class="t"></label>
                         <div id="submit_btn" class="login_button"
                              @click.prevent="loginHandler">
-                            <span id="loginsubmitword">&nbsp;登&nbsp;录&nbsp;</span>
+                            <span id="loginsubmitword">登&nbsp;录</span>
                         </div>
                     </div>
                     <input type="hidden" name="_csrf" value="56e6e7da-0d0f-4275-bb20-8fd2fc8dfb86" />
                     <div class="errorMessage" id="errorMessage" v-show="error">
-                        用户名或密码不正确
+                        {{errorMsg}}
                     </div>
             </div>
         </div>
@@ -94,31 +94,21 @@
             password:'',
             _csrf:"56e6e7da-0d0f-4275-bb20-8fd2fc8dfb86",//用户token
             error:false,
-            usernameshake:false,
-            passwordshake:false,
             isDelete:false,
             isSee:false,
             isPsw:'password',
             capsLockState:'',
             isCaplock:false,
-            isFocusBoo:false
+            isFocusBoo:false,
+            errorMsg:''
         },
         mounted:function(){
             document.msCapsLockWarningOff = true;//针对IE自定义capslock事件
         },
         methods:{
-            isFocus:function(){
-                this.isFocusBoo = true;
-            },
-            isBlur:function(){
-                this.isFocusBoo = false;
-            },
             checkCapsLock:function(event){
-//                console.log(event);
                 var keyCode = event.keyCode || event.which;
                 var isShift = event.shiftKey || (keyCode == 16) || false;
-                console.log(keyCode);
-                console.log('isShift:'+isShift);
                 var c1 = (keyCode >= 65 && keyCode <= 90) && ! isShift; // Caps Lock 打开，且没有按住shift键
                 var c2 = (keyCode >= 97 && keyCode <= 122) && isShift; // Caps Lock 打开，且按住shift键
                 var c3 = (keyCode >= 65 && keyCode <= 90) && isShift; // Caps Lock 关闭，且按住shift键
@@ -129,16 +119,9 @@
                 if (c3 || c4) {
                     this.capsLockState = 'off';
                 }
-                console.log(c1);
-                console.log(c2);
-                console.log(c3);
-                console.log(c4);
             },
             checkCapsLockKeyUp:function(event){
-//                console.log(event);
                 var e = event || window.event;
-//                console.log(e.keyCode);
-//                console.log(this.capsLockState);
                 if (e.keyCode == 20 && this.capsLockState != '') {
                     if (this.capsLockState == 'on') {
                         this.capsLockState = 'off';
@@ -147,7 +130,7 @@
                     }
                 }
                 if(e.keyCode == 13){
-                    this.ajaxPost();
+                    this.loginHandler();
                 }
             },
             loginHandler:function(){
@@ -155,25 +138,37 @@
                     this.ajaxPost();
                 }else{
                     if((this.username == '')&&(this.password == '')){
-                        this.usernameshake = true;
+                        this.ShakeFn('#usernameShake',8,3,100);
                     }
                     if(this.password == ''&&this.username != ''){
-                        this.passwordshake = true;
+                        this.ShakeFn('#passwordShake',8,3,100);
                     }
                     if(this.username == ''&&this.password != ''){
-                        this.usernameshake = true;
+                        this.ShakeFn('#usernameShake',8,3,100);
                     }
-                    this.error = true;
-                    this.initShakeClass();
+
                 }
             },
-            initShakeClass:function(){
-                var t_ = this;
-                setTimeout(function(){
-                    t_.passwordshake = false;
-                    t_.usernameshake = false;
-                },120)
-            },
+            ShakeFn:function (obj,time,wh,fx) {
+                    $(function(){
+                        var $panel = $(obj);
+                        var offset = $panel.offset()-$panel.width();
+                        var x= offset.left;
+                        var y= offset.top;
+                        for(var i=1; i<=time; i++){
+                            if(i%2==0) {
+                                $panel.animate({left:'+'+wh+'px'},fx);
+                            }else
+                            {
+                                $panel.animate({left:'-'+wh+'px'},fx);
+                            }
+
+                        }
+                        $panel.animate({left:0},fx);
+                        $panel.offset({ top: y, left: x });
+
+                    })
+                },
             ajaxPost:function(){
                 var t_ = this;
                 $.post("/nocportal/login",
@@ -197,6 +192,7 @@
                                         t_.error = true;
                                         break;
                                 }
+                                t_.errorMsg = '用户名或密码不正确';
                             }
                         });
             },
@@ -209,27 +205,74 @@
                     tar_.value == ''?this.isSee = false:this.isSee = true;
                 }
             },
-            seePsw:function(){
-                var _t = this;
-                _t.isPsw == 'text'?_t.isPsw = 'password':_t.isPsw = 'text'
-            },
             deleteUser:function(){
                 this.username = '';
                 this.isDelete = false;
-            }
-        },
+                $('#name').focus();
+            },
+            mouseupHanler:function(e){
+                this.isPsw = 'password';
+                $('#password').focus();
+            },
+            inputLength:function(val,sliceLen){
+                var len = 0;
+                var sliceIndex = sliceLen;
+                for (var i = 0; i < val.length; i++) {
+                    var a = val.charAt(i);
+                    if (a.match(/[^\x00-\xff]/ig) != null) {
+                        len += 2;
+                    }else {
+                        len += 1;
+                    }
+                    if(len==sliceLen){
+                        sliceIndex = i;
+                    }
+                };
+                return {
+                    len:len,
+                    sliceIndex:sliceIndex+1
+                }
+                }
+            },
         watch:{
             capsLockState:function(n,o){
-                console.log(n);
-                console.log(o);
                 if(n == 'on'&&this.isFocusBoo){
                     this.isCaplock = true;
                 }else{
                     this.isCaplock = false;
                 }
+            },
+            isFocusBoo:function(n,o){//监听是否聚焦input,隐藏tip
+                if(this.capsLockState == 'on'&&n){
+                    this.isCaplock = true;
+                }else{
+                    this.isCaplock = false;
+                }
+            },
+            username:function(n,o){
+                var lenObj = this.inputLength(n,20);
+                if(lenObj.len>=20){
+                    this.error = true;
+                    this.errorMsg = "用户名不可超过20个字符";
+                    this.username = this.username.slice(0, lenObj.sliceIndex);
+                }else{
+                    this.error = false;
+                }
+            },
+            password:function(n,o){
+                var lenObj = this.inputLength(n,200);
+                if(lenObj.len>=200){
+                    this.error = true;
+                    this.errorMsg = "密码不可超过200个字符";
+                    this.password = this.password.slice(0, lenObj.sliceIndex);
+                }else{
+                    this.error = false;
+                }
             }
         }
     })
+
+
 
 </script>
 </body>

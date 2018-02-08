@@ -2,34 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cd4e92c6-3dbb-4d7b-9e89-c3c54df4e2d8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/JD_comp/Login/IE_caplock.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/JD_comp/Login/caplockdemo.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/JD_comp/Login/css/shake.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/JD_comp/Login/css/tooltip.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/JD_comp/Login/login.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/study_components/vue_tooltip/tooltip.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JD_comp/Login/css/iconfont/font_b/demo.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JD_comp/Login/css/iconfont/font_b/demo_fontclass.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JD_comp/Login/css/iconfont/font_b/demo_symbol.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JD_comp/Login/css/iconfont/font_b/demo_unicode.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JD_comp/Login/css/iconfont/font_b/iconfont.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JD_comp/Login/css/iconfont/font_b/iconfont.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JD_comp/Login/css/iconfont/font_b/iconfont.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JD_comp/Login/css/iconfont/font_b/iconfont.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JD_comp/Login/css/iconfont/font_b/iconfont.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JD_comp/Login/css/iconfont/font_b/iconfont.woff" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JD_comp/Login/css/iconfont/font_1/iconfont.eot" afterPath="$PROJECT_DIR$/JD_comp/Login/css/iconfont/font_1/iconfont.eot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JD_comp/Login/css/iconfont/font_1/iconfont.ttf" afterPath="$PROJECT_DIR$/JD_comp/Login/css/iconfont/font_1/iconfont.ttf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JD_comp/Login/css/iconfont/font_1/iconfont.woff" afterPath="$PROJECT_DIR$/JD_comp/Login/css/iconfont/font_1/iconfont.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/JD_comp/Login/IE_caplock.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/JD_comp/Login/caplockdemo.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JD_comp/Login/css/iconfont/font_1/demo_fontclass.html" afterPath="$PROJECT_DIR$/JD_comp/Login/css/iconfont/font_1/demo_fontclass.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JD_comp/Login/css/iconfont/font_1/demo_symbol.html" afterPath="$PROJECT_DIR$/JD_comp/Login/css/iconfont/font_1/demo_symbol.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JD_comp/Login/css/iconfont/font_1/demo_unicode.html" afterPath="$PROJECT_DIR$/JD_comp/Login/css/iconfont/font_1/demo_unicode.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JD_comp/Login/css/iconfont/font_1/iconfont.css" afterPath="$PROJECT_DIR$/JD_comp/Login/css/iconfont/font_1/iconfont.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JD_comp/Login/css/iconfont/font_1/iconfont.js" afterPath="$PROJECT_DIR$/JD_comp/Login/css/iconfont/font_1/iconfont.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JD_comp/Login/css/iconfont/font_1/iconfont.svg" afterPath="$PROJECT_DIR$/JD_comp/Login/css/iconfont/font_1/iconfont.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CSS3/shake/index.html" afterPath="$PROJECT_DIR$/CSS3/shake/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JD_comp/Login/css/login.css" afterPath="$PROJECT_DIR$/JD_comp/Login/css/login.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JD_comp/Login/css/shake.css" afterPath="$PROJECT_DIR$/JD_comp/Login/css/shake.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JD_comp/Login/css/tooltip.css" afterPath="$PROJECT_DIR$/JD_comp/Login/css/tooltip.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JD_comp/Login/login.html" afterPath="$PROJECT_DIR$/JD_comp/Login/login.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JD_comp/Login/login.md" afterPath="$PROJECT_DIR$/JD_comp/Login/login.md" />
     </list>
     <ignored path="vue-in-action.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -50,23 +33,54 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="login.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/JD_comp/Login/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5457627">
-              <caret line="21" column="14" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
+            <state vertical-scroll-proportion="-3.59375">
+              <caret line="5" column="21" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
               <folding>
                 <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#5062#5142#0" expanded="false" />
-                <element signature="e#5377#6372#0" expanded="false" />
-                <element signature="e#6420#6998#0" expanded="false" />
-                <element signature="e#7035#7681#0" expanded="false" />
-                <element signature="e#7720#7920#0" expanded="false" />
-                <element signature="e#7953#9094#0" expanded="false" />
-                <element signature="e#9132#9461#0" expanded="false" />
-                <element signature="e#9492#9613#0" expanded="false" />
-                <element signature="e#9648#9738#0" expanded="false" />
+                <element signature="e#5124#5862#0" expanded="false" />
+                <element signature="e#5910#6361#0" expanded="false" />
+                <element signature="e#6398#7002#0" expanded="false" />
+                <element signature="e#7050#7797#0" expanded="false" />
+                <element signature="e#7830#9030#0" expanded="false" />
+                <element signature="e#9068#9397#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/JD_comp/Login/css/login.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.52163744">
+              <caret line="154" column="15" selection-start-line="154" selection-start-column="15" selection-end-line="154" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tooltip.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Desktop/webpack-cli/my-project/src/components/tooltip.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-15.09375">
+              <caret line="21" column="12" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tooltip.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/study_components/vue_tooltip/tooltip.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="122" column="54" selection-start-line="122" selection-start-column="54" selection-end-line="122" selection-end-column="54" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -109,19 +123,23 @@
         <option value="$USER_HOME$/Downloads/shake/csshake.css" />
         <option value="$USER_HOME$/Downloads/shake/index.html" />
         <option value="$PROJECT_DIR$/CSS3/shake/csshake.css" />
-        <option value="$PROJECT_DIR$/CSS3/shake/index.html" />
         <option value="$USER_HOME$/Desktop/sass学习/Sass_doc/sass.sass" />
-        <option value="$PROJECT_DIR$/JD_comp/Login/css/shake.css" />
         <option value="$PROJECT_DIR$/JD_comp/Login/js/index.js" />
         <option value="$PROJECT_DIR$/JD_comp/Login/IE_caplock.html" />
-        <option value="$PROJECT_DIR$/JD_comp/Login/caplockdemo.html" />
         <option value="$PROJECT_DIR$/JD_comp/Login/vue_tooltip/tooltip.html" />
-        <option value="$PROJECT_DIR$/JD_comp/Login/css/tooltip.css" />
-        <option value="$PROJECT_DIR$/JD_comp/Login/css/login.css" />
         <option value="$PROJECT_DIR$/JD_comp/Login/login.json" />
-        <option value="$PROJECT_DIR$/JD_comp/Login/login.html" />
         <option value="$USER_HOME$/Desktop/webpack-cli/my-project/src/utils/EventListener.js" />
+        <option value="$USER_HOME$/Desktop/webpack-cli/my-project/src/App.vue" />
+        <option value="$USER_HOME$/Desktop/webpack-cli/my-project/src/components/tooltip.vue" />
         <option value="$USER_HOME$/Desktop/webpack-cli/my-project/src/components/HelloWorld.vue" />
+        <option value="$PROJECT_DIR$/JD_comp/Login/caplockdemo.html" />
+        <option value="$PROJECT_DIR$/CSS3/shake/index.html" />
+        <option value="$PROJECT_DIR$/JD_comp/Login/css/shake.css" />
+        <option value="$PROJECT_DIR$/JD_comp/Login/login.md" />
+        <option value="$PROJECT_DIR$/JD_comp/Login/css/tooltip.css" />
+        <option value="$USER_HOME$/Desktop/Login1/css/login.css" />
+        <option value="$PROJECT_DIR$/JD_comp/Login/login.html" />
+        <option value="$PROJECT_DIR$/JD_comp/Login/css/login.css" />
       </list>
     </option>
   </component>
@@ -258,7 +276,43 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="datatables" />
+              <option name="myItemId" value="Login" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vue-in-action" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vue-in-action" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CSS3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shake" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vue-in-action" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vue-in-action" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CSS3" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -271,12 +325,14 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
     <property name="settings.editor.splitter.proportion" value="0.22918707" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="editor.config.accepted" value="true" />
+    <property name="JavaScriptPreferStrict" value="false" />
+    <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -364,12 +420,12 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -390,34 +446,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/JD_comp/Login/css/login.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="150" column="16" selection-start-line="150" selection-start-column="16" selection-end-line="150" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JD_comp/Login/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#5062#5142#0" expanded="false" />
-            <element signature="e#5377#6372#0" expanded="false" />
-            <element signature="e#6420#6998#0" expanded="false" />
-            <element signature="e#7035#7681#0" expanded="false" />
-            <element signature="e#7720#7920#0" expanded="false" />
-            <element signature="e#7953#9094#0" expanded="false" />
-            <element signature="e#9132#9461#0" expanded="false" />
-            <element signature="e#9492#9613#0" expanded="false" />
-            <element signature="e#9648#9738#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/JD_comp/Login/css/login.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -651,21 +679,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CSS3/shake/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8056497">
-          <caret line="31" column="41" selection-start-line="31" selection-start-column="41" selection-end-line="31" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JD_comp/Login/css/shake.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8440678">
-          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/JD_comp/Login/css/iconfont/font_1/demo_fontclass.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -680,85 +693,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/JD_comp/Login/IE_caplock.html">
+    <entry file="file://$USER_HOME$/Desktop/webpack-cli/my-project/src/App.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23389831">
-          <caret line="9" column="57" selection-start-line="9" selection-start-column="57" selection-end-line="9" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JD_comp/Login/caplockdemo.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JD_comp/Login/css/tooltip.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.29590642">
-          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-          <folding />
+        <state vertical-scroll-proportion="0.2079096">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="10" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/Desktop/webpack-cli/my-project/src/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/webpack-cli/my-project/src/App.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.9375">
-          <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
-          <folding />
+        <state vertical-scroll-proportion="0.2508179">
+          <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/Desktop/webpack-cli/my-project/src/utils/EventListener.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.2">
-          <caret line="12" column="58" selection-start-line="12" selection-start-column="58" selection-end-line="12" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JD_comp/Login/login.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.607142">
-          <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
-          <folding />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="39" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
         </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/Desktop/webpack-cli/my-project/src/components/HelloWorld.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49378532">
-          <caret line="19" column="33" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.3118644">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/JD_comp/Login/css/login.css">
+    <entry file="file://$USER_HOME$/Desktop/login.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7920904">
-          <caret line="233" column="11" selection-start-line="233" selection-start-column="1" selection-end-line="233" selection-end-column="11" />
-          <folding />
+        <state vertical-scroll-proportion="-0.3898305">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/study_components/vue_tooltip/tooltip.html">
+    <entry file="file://$PROJECT_DIR$/JD_comp/Login/css/shake.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.68813556">
-          <caret line="121" column="0" selection-start-line="121" selection-start-column="0" selection-end-line="124" selection-end-column="10" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.5322034">
+          <caret line="26" column="14" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CSS3/shake/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.03125">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="13" selection-end-column="48" />
         </state>
       </provider>
     </entry>
@@ -770,23 +750,70 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/JD_comp/Login/login.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5174353">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JD_comp/Login/css/tooltip.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3819209">
+          <caret line="43" column="25" selection-start-line="43" selection-start-column="25" selection-end-line="43" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/Login1/css/login.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.52163744">
+          <caret line="193" column="19" selection-start-line="193" selection-start-column="19" selection-end-line="193" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/study_components/vue_tooltip/tooltip.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="122" column="54" selection-start-line="122" selection-start-column="54" selection-end-line="122" selection-end-column="54" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/JD_comp/Login/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5457627">
-          <caret line="21" column="14" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
+        <state vertical-scroll-proportion="-3.59375">
+          <caret line="5" column="21" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
           <folding>
             <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#5062#5142#0" expanded="false" />
-            <element signature="e#5377#6372#0" expanded="false" />
-            <element signature="e#6420#6998#0" expanded="false" />
-            <element signature="e#7035#7681#0" expanded="false" />
-            <element signature="e#7720#7920#0" expanded="false" />
-            <element signature="e#7953#9094#0" expanded="false" />
-            <element signature="e#9132#9461#0" expanded="false" />
-            <element signature="e#9492#9613#0" expanded="false" />
-            <element signature="e#9648#9738#0" expanded="false" />
+            <element signature="e#5124#5862#0" expanded="false" />
+            <element signature="e#5910#6361#0" expanded="false" />
+            <element signature="e#6398#7002#0" expanded="false" />
+            <element signature="e#7050#7797#0" expanded="false" />
+            <element signature="e#7830#9030#0" expanded="false" />
+            <element signature="e#9068#9397#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/webpack-cli/my-project/src/components/tooltip.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.09375">
+          <caret line="21" column="12" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JD_comp/Login/css/login.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.52163744">
+          <caret line="154" column="15" selection-start-line="154" selection-start-column="15" selection-end-line="154" selection-end-column="15" />
+          <folding />
         </state>
       </provider>
     </entry>

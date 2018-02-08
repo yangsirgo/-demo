@@ -2,8 +2,8 @@
 
 1. 请求方式POST
 2. 请求地址"/nocportal/login"
-3. 返回接口格式：
-
+3. 返回接口格式参照login.json
+	
     `
 		{
 		  "status": "error",
