@@ -72,7 +72,8 @@
                             <span id="loginsubmitword">登&nbsp;录</span>
                         </div>
                     </div>
-                    <input type="hidden" name="_csrf" value="56e6e7da-0d0f-4275-bb20-8fd2fc8dfb86" />
+                <!--_csrf指令-->
+                    <input type="hidden" id="_csrf" value="${_csrf.token}" />
                     <div class="errorMessage" id="errorMessage" v-show="error">
                         {{errorMsg}}
                     </div>
@@ -87,12 +88,15 @@
         }
     })
 
+    var AjaxConfig = {
+        loginUrl:"/nocportal/login.do"
+    }
+
     var app = new Vue({
         el:'#page-container',
         data:{
             username:'',
             password:'',
-            _csrf:"56e6e7da-0d0f-4275-bb20-8fd2fc8dfb86",//用户token
             error:false,
             isDelete:false,
             isSee:false,
@@ -103,6 +107,7 @@
             errorMsg:''
         },
         mounted:function(){
+            var _t = this;
             document.msCapsLockWarningOff = true;//针对IE自定义capslock事件
         },
         methods:{
@@ -171,30 +176,25 @@
                 },
             ajaxPost:function(){
                 var t_ = this;
-                $.post("/nocportal/login",
-                        {
-                            username:t_.username,
-                            password:t_.password,
-                            _csrf:t_._csrf
-                        },
-                        function(result){
-                            if(result.status=='success'){
-                                window.location.href = 'www.baidu.com';//跳转到主页面
-                            }else if(result.status=='error'){
-                                switch(result.code) {
-                                    case 1://密码错误
-                                        if(!t_.isSee){
-                                            t_.password = '';
-                                        }
-                                        t_.error = true;
-                                        break;
-                                    case 2://用户名错误
-                                        t_.error = true;
-                                        break;
-                                }
-                                t_.errorMsg = '用户名或密码不正确';
-                            }
-                        });
+                var csrf = $('#_csrf').val();
+                $.ajax({
+                    type: 'POST',
+                    url: AjaxConfig.loginUrl,
+                    data: {
+                        username:t_.username,
+                        password:t_.password,
+                        _csrf:csrf
+                    },
+                    dataType: 'json',
+                    success: function(result){
+                        if(result.status=='success'){
+                            window.location.href = result.details.goUrl;//跳转到主页面
+                        }else if(result.status=='error'){
+                            t_.error = true;
+                            t_.errorMsg = '用户名或密码不正确';
+                        }
+                    }
+                });
             },
             changeHanler:function(e){
                 var tar_ = e.target;

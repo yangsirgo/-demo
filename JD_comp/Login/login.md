@@ -1,15 +1,21 @@
 ## 登录接口api说明 ##
 
+### 用户名接口： ###
 1. 请求方式POST
 2. 请求地址"/nocportal/login"
-3. 返回接口格式参照login.json
+3. 传递参数：
+	- username 用户名
+	- password 用户密码
+	- _csrf 用户的token
+4. 返回接口格式参照login.json
 	
     `
 		{
 		  "status": "error",
 		  "details": {
 		    "code": 1,
-		    "msg": "用户名错误"
+		    "msg": "用户名错误",
+			"goUrl":"www.baidu.com"
 		  }
 		}
 	`
