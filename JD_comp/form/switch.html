@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+    <link rel="stylesheet" href="./checkBox.css">
+</head>
+<body>
+<div class="demo1">
+    <span>修仙吗？</span>
+    <label class="gd-switch">
+        <input id="myInputPC2" type="checkbox" value="0" name="checkbox"/>
+        <i></i>
+    </label>
+    <p>Checkbox</p>
+    <label  class="gd-checkbox">
+        <span>
+            <input type="checkbox" class="ivu-checkbox-input">
+            <span class="gd-checkbox-inner"></span>
+        </span>
+        Checkbox
+    </label>
+</div>
+<script>
+    $("#myInputPC2").click(function () {
+        var $input = $("#myInputPC2");
+        var $results = $(".results");
+        var isChecked = $input.is(":checked");
+
+        console.log(isChecked);
+
+        $results.children().hide();
+        if (isChecked) {
+            $(".p1").show();
+        } else {
+            $(".p2").show();
+        }
+    });
+</script>
+</body>
+</html>

@@ -9,7 +9,6 @@
     <div style="margin-top: 50px"></div>
     <div id="container" class="container transit"></div>
     <script>
-        (function(){
             var container = document.getElementById("container");
             var chips = new Array();
             container.chipOnFocus = Chip;
@@ -188,7 +187,6 @@
                 }
             }
             container.addEventListener('click', containerClicked);
-        })();
 
 
         createChip("John");
